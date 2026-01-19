@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Anatomy SVG - 6ft Male (ANSUR II 95th %ile)</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="controls">
+        <h1>Human Anatomy</h1>
+        <!-- Physical Layers (Always Visible) -->
+        <fieldset class="layer-group physical">
+            <legend>Physical Layers</legend>
+            <label><input type="checkbox" id="toggle-skeleton" checked> Skeletal System</label>
+            <label><input type="checkbox" id="toggle-ligaments"> Ligaments</label>
+            <label><input type="checkbox" id="toggle-organs" checked> Organ Systems</label>
+            <div id="reproductive-controls" style="margin-left: 20px; display: none;">
+                <label><input type="checkbox" id="toggle-reproductive"> Reproductive (Sub-layer)</label>
+                <div id="gender-selector" style="margin-left: 20px; display: none;">
+                    <label><input type="radio" name="gender" value="male" checked> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </div>
+            </div>
+            <label><input type="checkbox" id="toggle-circulatory"> Arteries & Veins</label>
+            <label><input type="checkbox" id="toggle-lymphatic"> Lymphatic System</label>
+            <label><input type="checkbox" id="toggle-integumentary"> Integumentary (Skin/Hair)</label>
+            <label><input type="checkbox" id="toggle-muscle" disabled> Muscular System</label>
+        </fieldset>
+
+        <!-- Esoteric Layers (Collapsible) -->
+        <details class="layer-group esoteric">
+            <summary>Esoteric Energy Systems</summary>
+
+            <details class="sub-layer">
+                <summary>Central Axis</summary>
+                <div class="sub-layer-content">
+                    <label><input type="checkbox" id="toggle-chakras"> Chakras (7)</label>
+                    <label><input type="checkbox" id="toggle-dantians"> Dantians (3)</label>
+                    <label><input type="checkbox" id="toggle-sushumna"> Sushumna (1)</label>
+                </div>
+            </details>
+
+            <details class="sub-layer">
+                <summary>Flow Network</summary>
+                <div class="sub-layer-content">
+                    <label><input type="checkbox" id="toggle-meridians"> Primary Meridians (12 pairs)</label>
+                    <label><input type="checkbox" id="toggle-nadis"> Nadis (Ida & Pingala)</label>
+                    <label><input type="checkbox" id="toggle-marma"> Marma Points (107)</label>
+                </div>
+            </details>
+
+            <details class="sub-layer">
+                <summary>Archetypal Structure</summary>
+                <div class="sub-layer-content">
+                    <label><input type="checkbox" id="toggle-sephirot"> Sephirot Tree (10+22)</label>
+                    <label><input type="checkbox" id="toggle-koshas"> Koshas (5)</label>
+                </div>
+            </details>
+        </details>
+        <div id="stats-panel">
+            <h3>Rendering Stats</h3>
+            <div class="stat-row">
+                <span class="stat-label">Bones:</span>
+                <span id="stat-bones" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Teeth:</span>
+                <span id="stat-teeth" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Organs:</span>
+                <span id="stat-organs" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Muscles:</span>
+                <span id="stat-muscles" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Nerves:</span>
+                <span id="stat-nerves" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Ligaments:</span>
+                <span id="stat-ligaments" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Vessels:</span>
+                <span id="stat-vessels" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Nodes:</span>
+                <span id="stat-nodes" class="stat-value">0</span>
+            </div>
+            <!-- Energy Body Stats -->
+            <div class="stat-row">
+                <span class="stat-label">Chakras:</span>
+                <span id="stat-chakras" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Marmas:</span>
+                <span id="stat-marmas" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Sephirot:</span>
+                <span id="stat-sephirot" class="stat-value">0</span>
+            </div>
+        </div>
+        <div id="info-panel">
+            <h3>Selected Part</h3>
+            <p id="part-name">Hover over a bone...</p>
+            <p id="part-metrics" class="metrics">N/A</p>
+        </div>
+    </div>
+
+    <div id="svg-container">
+        <!-- 
+            ViewBox Strategy:
+            Subject Height: 1830mm (approx 1830 units)
+            Width: ~600mm (600 units)
+            Padding: 100 units
+            ViewBox: -400 -100 800 2000 
+            Center X at 0
+        -->
+        <svg id="anatomy-svg" viewBox="-400 -100 800 2000" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <style>
+                    .bone {
+                        fill: #e8e6d1;
+                        stroke: #8c8c8c;
+                        stroke-width: 1;
+                        vector-effect: non-scaling-stroke;
+                    }
+
+                    .bone:hover {
+                        fill: #ffeebb;
+                        stroke: #555;
+                        cursor: pointer;
+                    }
+
+                    .tooth {
+                        fill: #ffffff;
+                        stroke: #8c8c8c;
+                        stroke-width: 1;
+                        vector-effect: non-scaling-stroke;
+                    }
+
+                    .tooth:hover {
+                        fill: #ffffcc;
+                        stroke: #555;
+                        cursor: pointer;
+                    }
+
+                    .chakra:hover {
+                        cursor: pointer;
+                        filter: brightness(1.5);
+                    }
+                </style>
+            </defs>
+            <g id="layer-koshas" style="display: none;">
+                <g id="group-koshas"></g>
+            </g>
+
+            <g id="skeletal-system">
+                <!-- Content injected by anatomy.js -->
+            </g>
+            <g id="ligament-system" style="display: none;">
+                <!-- Ligaments -->
+            </g>
+            <g id="organ-systems">
+                <!-- Organs -->
+            </g>
+            <g id="circulatory-system" style="display: none;">
+                <!-- Arteries and Veins -->
+            </g>
+            <g id="lymphatic-system" style="display: none;">
+                <!-- Lymph Nodes and Vessels -->
+            </g>
+            <g id="integumentary-system" style="display: none;">
+                <!-- Skin, Hair, Nails -->
+            </g>
+            <g id="layer-flow-network" style="display: none;">
+                <g id="group-meridians"></g>
+                <g id="group-nadis"></g>
+                <g id="group-marma"></g>
+            </g>
+
+            <!-- Energy Body Layers (Central) -->
+            <g id="layer-central-axis" style="display: none;">
+                <g id="group-chakras"></g>
+                <g id="group-dantians"></g>
+                <g id="group-sushumna"></g>
+            </g>
+
+            <g id="layer-archetypal" style="display: none;">
+                <g id="group-sephirot"></g>
+            </g>
+        </svg>
+    </div>
+
+    <script type="module" src="anatomy.js"></script>
+</body>
+
+</html>
