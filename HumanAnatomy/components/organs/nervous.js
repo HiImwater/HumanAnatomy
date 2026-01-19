@@ -49,8 +49,8 @@ export const nervousSystemSVG = `
     <!-- OPTIC PATHWAY -->
     <g id="organ_optic_pathway" stroke="#fff5e6" stroke-width="1.5" fill="none" opacity="0.9">
         <!-- Optic Nerves -->
-        <path id="part_optic_nerve_left" d="M -30 80 C -25 82, -15 90, -5 95" />
-        <path id="part_optic_nerve_right" d="M 30 80 C 25 82, 15 90, 5 95" />
+        <path id="part_optic_nerve_left" d="M -45 90 C -35 92, -15 90, -5 95" />
+        <path id="part_optic_nerve_right" d="M 45 90 C 35 92, 15 90, 5 95" />
         <!-- Optic Chiasm -->
         <circle id="part_optic_chiasm" cx="0" cy="95" r="3" fill="#fff5e6" stroke="none" />
         <title>Optic Pathway (CN II)</title>
@@ -185,8 +185,8 @@ export const nervousSystemSVG = `
         
         <!-- Optic Pathway (CN II): Refined -->
         <g id="nerve_optic" stroke="#fff5e6" opacity="0.9">
-            <path id="part_optic_nerve_left" d="M -30 80 C -25 82, -15 90, -5 95" stroke-width="1.8" />
-            <path id="part_optic_nerve_right" d="M 30 80 C 25 82, 15 90, 5 95" stroke-width="1.8" />
+            <path id="part_optic_nerve_left" d="M -45 90 C -35 92, -15 90, -5 95" stroke-width="1.8" />
+            <path id="part_optic_nerve_right" d="M 45 90 C 35 92, 15 90, 5 95" stroke-width="1.8" />
             <circle id="part_optic_chiasm" cx="0" cy="95" r="3.5" fill="#fff5e6" stroke="none" />
             <title>Optic Pathway (CN II)</title>
         </g>
@@ -260,19 +260,19 @@ export const nervousSystemSVG = `
 
 
     <!-- EYES
-         Placement: Orbits. Y=~80.
+         Placement: Orbits. Aligned with Orbicularis Oculi centers (+/- 45, 90).
     -->
     <circle id="organ_eye_left" class="organ" data-name="Left Eye" data-medical-name="Oculus Sinister"
-        cx="-30" cy="80" r="12"
+        cx="-45" cy="90" r="10"
         fill="#ffffff" stroke="#cccccc" stroke-width="1" />
-    <circle cx="-30" cy="80" r="4" fill="#66bbff" /> <!-- Iris -->
-    <circle cx="-30" cy="80" r="1.5" fill="#000000" /> <!-- Pupil -->
+    <circle cx="-45" cy="90" r="3.5" fill="#66bbff" /> <!-- Iris -->
+    <circle cx="-45" cy="90" r="1.3" fill="#000000" /> <!-- Pupil -->
 
     <circle id="organ_eye_right" class="organ" data-name="Right Eye" data-medical-name="Oculus Dexter"
-        cx="30" cy="80" r="12"
+        cx="45" cy="90" r="10"
         fill="#ffffff" stroke="#cccccc" stroke-width="1" />
-    <circle cx="30" cy="80" r="4" fill="#66bbff" /> <!-- Iris -->
-    <circle cx="30" cy="80" r="1.5" fill="#000000" /> <!-- Pupil -->
+    <circle cx="45" cy="90" r="3.5" fill="#66bbff" /> <!-- Iris -->
+    <circle cx="45" cy="90" r="1.3" fill="#000000" /> <!-- Pupil -->
 
 </g>
 `;

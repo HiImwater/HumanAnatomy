@@ -10,21 +10,21 @@ body {
 
 #controls {
     width: 260px;
-    /* Slights narrower */
     background: white;
-    padding: 15px;
-    /* Reduced padding */
+    padding: 8px;
+    /* Compacted */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     z-index: 10;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    /* Allow scrolling if needed */
 }
 
 h1 {
-    font-size: 1.5rem;
-    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    /* Reduced */
+    margin: 0 0 10px 0;
+    /* Reduced */
     color: #333;
 }
 
@@ -36,7 +36,6 @@ h1 {
     align-items: center;
     background-color: #333;
     overflow: hidden;
-    /* Prevent scrollbars */
 }
 
 svg {
@@ -50,28 +49,34 @@ svg {
 fieldset.layer-group.physical {
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 15px;
-    padding: 10px;
+    margin-bottom: 8px;
+    /* Reduced */
+    padding: 5px 8px;
+    /* Reduced */
 }
 
 legend {
     font-weight: 600;
     color: #444;
     padding: 0 5px;
+    font-size: 0.9rem;
+    /* Reduced */
 }
 
 label {
     display: block;
-    margin: 3px 0;
-    /* Tighter spacing */
+    margin: 1px 0;
+    /* Tightest spacing */
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    /* Reduced */
     display: flex;
     align-items: center;
 }
 
 label input {
-    margin-right: 8px;
+    margin-right: 6px;
+    /* Reduced */
 }
 
 /* --- Esoteric Details Styling --- */
@@ -79,18 +84,21 @@ label input {
 details.layer-group.esoteric {
     border: 1px solid #e0e0e0;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    /* Reduced */
     background: #fafafa;
 }
 
 details.layer-group.esoteric>summary {
-    padding: 10px;
+    padding: 6px 8px;
+    /* Reduced */
     cursor: pointer;
     font-weight: 600;
     list-style: none;
-    /* Hide default triangle */
     background: #f0f0f0;
     border-radius: 5px;
+    font-size: 0.9rem;
+    /* Reduced */
 }
 
 details.layer-group.esoteric[open]>summary {
@@ -100,7 +108,8 @@ details.layer-group.esoteric[open]>summary {
 }
 
 details.sub-layer {
-    margin: 5px 10px;
+    margin: 2px 5px;
+    /* Reduced */
     border-bottom: 1px solid #eee;
 }
 
@@ -110,42 +119,55 @@ details.sub-layer:last-child {
 
 details.sub-layer>summary {
     cursor: pointer;
-    padding: 5px 0;
+    padding: 3px 0;
+    /* Reduced */
     color: #555;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    /* Reduced */
     font-weight: 500;
 }
 
 .sub-layer-content {
-    padding-left: 15px;
-    padding-bottom: 5px;
+    padding-left: 10px;
+    /* Reduced */
+    padding-bottom: 3px;
 }
 
 /* --- Stats Panel Compact --- */
 
 #stats-panel {
     background: #e8f4f8;
-    padding: 10px;
+    padding: 6px 8px;
+    /* Compacted */
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    /* Reduced */
     border: 1px solid #b3d9e6;
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     /* Smaller font */
+    display: grid;
+    /* Grid Layout */
+    grid-template-columns: 1fr 1fr;
+    /* Two columns */
+    gap: 2px 10px;
+    /* Row gap and Column gap */
 }
 
 #stats-panel h3 {
+    grid-column: 1 / -1;
+    /* Span full width */
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     color: #2c5f7a;
-    font-size: 0.95em;
+    font-size: 0.9em;
     border-bottom: 1px solid #d0e8f0;
-    padding-bottom: 5px;
+    padding-bottom: 2px;
 }
 
 .stat-row {
     display: flex;
     justify-content: space-between;
-    padding: 3px 0;
+    padding: 1px 0;
     /* Tighter rows */
 }
 
@@ -162,13 +184,112 @@ details.sub-layer>summary {
 #info-panel {
     margin-top: auto;
     background: #f9f9f9;
-    padding: 10px;
+    padding: 8px;
     border-radius: 5px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+}
+
+#info-panel h3 {
+    margin: 0 0 5px 0;
+    font-size: 0.95rem;
+    color: #444;
 }
 
 .metrics {
     font-size: 0.85em;
     color: #666;
-    margin: 5px 0 0 0;
+    margin: 0;
+}
+
+/* --- Kosha Animations (Optimized) --- */
+
+.kosha {
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes aura-pulse {
+    0% {
+        opacity: 0.3;
+        transform: scale(1.0);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.02);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: scale(1.0);
+    }
+}
+
+.kosha-anandamaya {
+    animation: aura-pulse 15s infinite ease-in-out;
+}
+
+.kosha-vijnanamaya {
+    animation: aura-pulse 12s infinite ease-in-out 1s;
+}
+
+.kosha-manomaya {
+    animation: aura-pulse 10s infinite ease-in-out 2s;
+}
+
+.kosha-pranamaya {
+    animation: aura-pulse 8s infinite ease-in-out 3s;
+}
+
+.kosha-annamaya {
+    /* Purely physical, very subtle pulse or none */
+    animation: aura-pulse 20s infinite ease-in-out;
+}
+
+/* --- Muscular & Connective System Styling --- */
+
+.muscle-deep {
+    fill: url(#muscle_belly_grad);
+    stroke: #330000;
+    stroke-width: 0.5;
+    vector-effect: non-scaling-stroke;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.3));
+}
+
+.muscle-superficial {
+    fill: url(#muscle_belly_grad);
+    stroke: #600000;
+    stroke-width: 0.5;
+    vector-effect: non-scaling-stroke;
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.4));
+}
+
+.muscle-deep:hover,
+.muscle-superficial:hover {
+    filter: brightness(1.2);
+    cursor: pointer;
+}
+
+.tendon {
+    fill: url(#tendon_grad);
+    stroke: #ccc;
+    stroke-width: 0.3;
+    vector-effect: non-scaling-stroke;
+    filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.1));
+}
+
+.fascia,
+.aponeurosis {
+    fill: url(#fascia_grad);
+    stroke: none;
+    opacity: 0.7;
+    pointer-events: none;
+    /* Usually non-interactive overlays */
+}
+
+.tendon:hover {
+    filter: brightness(1.1);
+    stroke: #aaa;
+    cursor: pointer;
 }

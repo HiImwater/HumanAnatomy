@@ -7,137 +7,95 @@ export const thoracicCageSVG = `
     -->
 
     <!-- Rib 1 (T1) -->
-    <!-- Start Y: 330. Neck thick. -->
+    <!-- Short, broad, flat. Slopes down. -->
+    <!-- Rib 1 (T1) -->
+    <!-- Short, broad, flat. Slopes down. WIDENED v2 (Shoulder fit) -->
     <path id="bone_rib_left_01" class="bone" data-name="Left Rib 1" data-medical-name="Costa I Sinister"
-        d="M -20 335 L -20 325 
-           L -30 323
-           C -40 323, -50 327, -60 333
-           C -70 340, -72 347, -70 355
-           C -65 363, -50 367, -35 365
-           L -26 359
-           C -35 365, -45 369, -60 369
-           C -75 369, -85 363, -88 353
-           C -90 343, -80 333, -70 325
-           C -60 317, -40 315, -20 315
+        d="M -20 340 L -20 330         
+           C -50 330, -90 335, -125 345  
+           C -138 355, -135 365, -110 375  
+           C -90 380, -50 380, -26 375  
+           L -30 370
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
     <path id="bone_rib_right_01" class="bone" data-name="Right Rib 1" data-medical-name="Costa I Dexter"
-        d="M 20 335 L 20 325
-           L 30 323
-           C 40 323, 50 327, 60 333
-           C 70 340, 72 347, 70 355
-           C 65 363, 50 367, 35 365
-           L 26 359
-           C 35 365, 45 369, 60 369
-           C 75 369, 85 363, 88 353
-           C 90 343, 80 333, 70 325
-           C 60 317, 40 315, 20 315
+        d="M 20 340 L 20 330
+           C 50 330, 90 335, 125 345
+           C 138 355, 135 365, 110 375
+           C 90 380, 50 380, 26 375
+           L 30 370
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
 
-    <!-- Rib 2 (T2) - Y: 355 -->
+    <!-- Rib 2 (T2) - Anterior ends lower. WIDENED v2 -->
     <path id="bone_rib_left_02" class="bone" data-name="Left Rib 2" data-medical-name="Costa II Sinister"
-        d="M -20 360 L -20 350
-           L -32 348
-           C -45 350, -65 360, -80 375
-           C -90 385, -95 395, -90 405
-           C -85 412, -70 415, -50 415
-           L -24 408
-           C -35 412, -55 416, -75 416
-           C -95 418, -105 410, -108 395
-           C -110 385, -100 370, -80 360
-           C -65 350, -40 348, -20 345
+        d="M -20 365 L -20 355
+           C -60 355, -110 370, -145 390
+           C -155 405, -150 415, -120 425
+           C -90 430, -50 425, -24 415
+           L -28 410
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
     <path id="bone_rib_right_02" class="bone" data-name="Right Rib 2" data-medical-name="Costa II Dexter"
-        d="M 20 360 L 20 350
-           L 32 348
-           C 45 350, 65 360, 80 375
-           C 90 385, 95 395, 90 405
-           C 85 412, 70 415, 50 415
-           L 24 408
-           C 35 412, 55 416, 75 416
-           C 95 418, 105 410, 108 395
-           C 110 385, 100 370, 80 360
-           C 65 350, 40 348, 20 345
+        d="M 20 365 L 20 355
+           C 60 355, 110 370, 145 390
+           C 155 405, 150 415, 120 425
+           C 90 430, 50 425, 24 415
+           L 28 410
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
 
-    <!-- Rib 3 (T3) - Y: 380 -->
+    <!-- Rib 3 (T3) - WIDENED v2 -->
     <path id="bone_rib_left_03" class="bone" data-name="Left Rib 3" data-medical-name="Costa III Sinister"
-        d="M -20 385 L -20 375
-           C -38 377, -55 387, -75 400
-           C -90 413, -105 430, -100 445
-           C -98 453, -85 457, -60 457
-           L -24 450
-           C -40 457, -65 460, -90 460
-           C -110 460, -115 445, -112 435
-           C -110 420, -95 403, -75 390
-           C -60 380, -35 373, -20 370
+        d="M -20 390 L -20 380
+           C -65 380, -120 400, -155 420
+           C -170 440, -160 455, -130 465
+           C -100 470, -50 460, -24 455
+           L -28 450
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
     <path id="bone_rib_right_03" class="bone" data-name="Right Rib 3" data-medical-name="Costa III Dexter"
-        d="M 20 385 L 20 375
-           C 38 377, 55 387, 75 400
-           C 90 413, 105 430, 100 445
-           C 98 453, 85 457, 60 457
-           L 24 450
-           C 40 457, 65 460, 90 460
-           C 110 460, 115 445, 112 435
-           C 110 420, 95 403, 75 390
-           C 60 380, 35 373, 20 370
+        d="M 20 390 L 20 380
+           C 65 380, 120 400, 155 420
+           C 170 440, 160 455, 130 465
+           C 100 470, 50 460, 24 455
+           L 28 450
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
 
-    <!-- Rib 4 (T4) - Y: 405 -->
+    <!-- Rib 4 (T4) -->
     <path id="bone_rib_left_04" class="bone" data-name="Left Rib 4" data-medical-name="Costa IV Sinister"
-        d="M -20 410 L -20 400
-           C -38 402, -60 415, -85 430
-           C -105 445, -115 465, -110 480
-           C -105 488, -85 492, -60 492
-           L -22 486
-           C -45 494, -75 496, -100 496
-           C -120 496, -125 480, -120 470
-           C -120 450, -105 432, -85 418
-           C -65 408, -40 398, -20 395
+        d="M -20 415 L -20 405
+           C -60 405, -100 425, -125 450
+           C -140 470, -130 490, -100 500
+           C -80 505, -45 495, -22 490
+           L -26 485
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
     <path id="bone_rib_right_04" class="bone" data-name="Right Rib 4" data-medical-name="Costa IV Dexter"
-        d="M 20 410 L 20 400
-           C 38 402, 60 415, 85 430
-           C 105 445, 115 465, 110 480
-           C 105 488, 85 492, 60 492
-           L 22 486
-           C 45 494, 75 496, 100 496
-           C 120 496, 125 480, 120 470
-           C 120 450, 105 432, 85 418
-           C 65 408, 40 398, 20 395
+        d="M 20 415 L 20 405
+           C 60 405, 100 425, 125 450
+           C 140 470, 130 490, 100 500
+           C 80 505, 45 495, 22 490
+           L 26 485
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
 
-    <!-- Rib 5 (T5) - Y: 431 -->
+    <!-- Rib 5 (T5) -->
     <path id="bone_rib_left_05" class="bone" data-name="Left Rib 5" data-medical-name="Costa V Sinister"
-        d="M -20 436 L -20 426
-           C -42 428, -70 441, -95 458
-           C -115 476, -130 496, -125 514
-           C -122 524, -100 528, -70 528
-           L -22 518
-           C -50 528, -80 532, -110 532
-           C -135 532, -145 516, -140 506
-           C -138 486, -120 466, -100 451
-           C -75 436, -45 424, -20 421
+        d="M -20 440 L -20 430
+           C -65 430, -110 450, -135 480
+           C -150 500, -140 520, -110 535
+           C -90 540, -50 530, -22 525
+           L -26 520
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
     <path id="bone_rib_right_05" class="bone" data-name="Right Rib 5" data-medical-name="Costa V Dexter"
-        d="M 20 436 L 20 426
-           C 42 428, 70 441, 95 458
-           C 115 476, 130 496, 125 514
-           C 122 524, 100 528, 70 528
-           L 22 518
-           C 50 528, 80 532, 110 532
-           C 135 532, 145 516, 140 506
-           C 138 486, 120 466, 100 451
-           C 75 436, 45 424, 20 421
+        d="M 20 440 L 20 430
+           C 65 430, 110 450, 135 480
+           C 150 500, 140 520, 110 535
+           C 90 540, 50 530, 22 525
+           L 26 520
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
 

@@ -47,60 +47,66 @@ export const thoracicOrgansSVG = `
     </g>
 
     <!-- LUNGS 
-         Placement: Flanking heart. 
-         Right Lung: 3 Lobes. 
-         Left Lung: 2 Lobes + Cardiac Notch.
+         Placement: Flanking heart. Adjusted to fit within Rib Cage (T1-T10/11).
+         Apex: Just above Clavicle/Rib 1 (Y ~325).
+         Base: Diaphragm (Y ~550).
+         Width: Max X ~125 (within Rib 8's 140).
     -->
     
     <!-- Right Lung (Superior Lobe) -->
     <path id="organ_lung_right_superior" class="organ" data-name="Right Lung (Superior Lobe)" data-medical-name="Pulmo Dexter - Lobus Superior"
-        d="M 25 310
-           C 25 290, 40 280, 70 290  
-           C 100 300, 115 340, 115 380 
-           C 115 400, 110 410, 100 420
-           L 25 400
+        d="M 30 330                  
+           C 30 315, 50 315, 80 330  
+           C 115 350, 135 390, 135 420 
+           C 135 440, 125 450, 100 455 
+           L 30 435                  
+           L 30 330
            Z"
         fill="url(#lungTexture)" fill-color="#ffb3b3" stroke="#cc6666" stroke-width="1.5" />
 
     <!-- Right Lung (Middle Lobe) -->
     <path id="organ_lung_right_middle" class="organ" data-name="Right Lung (Middle Lobe)" data-medical-name="Pulmo Dexter - Lobus Medius"
-        d="M 25 400
-           L 100 420
-           C 95 450, 90 470, 80 480
-           L 25 460
+        d="M 30 435
+           L 100 455                 
+           C 105 470, 110 490, 105 510 
+           L 30 490                  
+           L 30 435
            Z"
         fill="url(#lungTexture)" fill-color="#ffb3b3" stroke="#cc6666" stroke-width="1.5" />
 
     <!-- Right Lung (Inferior Lobe) -->
     <path id="organ_lung_right_inferior" class="organ" data-name="Right Lung (Inferior Lobe)" data-medical-name="Pulmo Dexter - Lobus Inferior"
-        d="M 25 460
-           L 80 480
-           C 70 520, 50 540, 25 535 
-           L 25 460
+        d="M 30 490
+           L 105 510                 
+           C 100 540, 90 560, 30 570 
+           C 25 560, 30 550, 30 490  
            Z"
         fill="url(#lungTexture)" fill-color="#ffb3b3" stroke="#cc6666" stroke-width="1.5" />
 
 
     <!-- Left Lung (Superior Lobe) -->
+    <!-- Includes Cardiac Notch -->
     <path id="organ_lung_left_superior" class="organ" data-name="Left Lung (Superior Lobe)" data-medical-name="Pulmo Sinister - Lobus Superior"
-        d="M -25 310
-           C -25 290, -40 280, -70 290
-           C -100 300, -115 340, -115 380
-           C -115 410, -100 440, -70 460 
-           L -25 440
+        d="M -30 330                 
+           C -30 315, -50 315, -80 330
+           C -115 350, -135 390, -135 420
+           C -135 450, -125 470, -100 490
+           L -50 470                 
+           L -30 440                 
+           C -45 420, -45 400, -30 380 
+           L -30 330
            Z"
         fill="url(#lungTexture)" fill-color="#ffb3b3" stroke="#cc6666" stroke-width="1.5" />
 
     <!-- Left Lung (Inferior Lobe) -->
     <path id="organ_lung_left_inferior" class="organ" data-name="Left Lung (Inferior Lobe)" data-medical-name="Pulmo Sinister - Lobus Inferior"
-        d="M -25 440
-           L -70 460
-           C -60 500, -50 520, -25 540 
-           C -15 545, -10 540, -5 520  
-           L -25 440
+        d="M -50 470
+           L -100 490                
+           C -95 530, -85 560, -30 570 
+           C -25 560, -30 540, -30 500 
+           L -50 470
            Z"
         fill="url(#lungTexture)" fill-color="#ffb3b3" stroke="#cc6666" stroke-width="1.5" />
-
 
     <!-- THYMUS
          Placement: Mediastinum, anterior to great vessels.
@@ -119,10 +125,10 @@ export const thoracicOrgansSVG = `
     <!-- PLEURA (Serous Membrane / Lung Lining) -->
     <g id="organ_pleura" opacity="0.3">
         <path id="organ_pleura_right" class="organ" data-name="Right Pleura" data-medical-name="Pleura Dextra"
-            d="M 22 305 C 22 280, 120 280, 120 380 C 120 480, 80 550, 20 540 Z"
+            d="M 22 340 C 22 315, 130 315, 130 415 C 130 515, 80 585, 20 575 Z"
             fill="none" stroke="#add8e6" stroke-width="1" />
         <path id="organ_pleura_left" class="organ" data-name="Left Pleura" data-medical-name="Pleura Sinistra"
-            d="M -22 305 C -22 280, -120 280, -120 380 C -120 480, -80 550, -20 540 Z"
+            d="M -22 340 C -22 315, -130 315, -130 415 C -130 515, -80 585, -20 575 Z"
             fill="none" stroke="#add8e6" stroke-width="1" />
     </g>
 

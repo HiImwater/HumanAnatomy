@@ -9,22 +9,23 @@ export const feetSVG = `
     -->
 
     <!-- ==================== LEFT FOOT ==================== -->
+    <g id="foot_left_group" transform="translate(-25, 15)">
     <!-- Shift -20 (e.g. Talus X -55 -> -75) -->
 
     <!-- LEFT TARSALS -->
 
-    <!-- Left Talus -->
+    <!-- Left Talus (Refined Dome Shape) -->
+    <!-- Local Cords: Top ~1845 -> Global 1860 -->
     <path id="bone_talus_left" class="bone"
         data-name="Left Talus"
         data-medical-name="Talus Sinister"
-        d="M -75 1860
-           C -70 1858, -65 1860, -63 1865
-           L -60 1875
-           Q -62 1885, -67 1888
-           L -85 1890
-           Q -90 1888, -92 1880
-           L -95 1865
-           C -93 1860, -87 1858, -80 1860
+        d="M -75 1845
+           C -65 1845, -55 1850, -50 1860
+           L -48 1870
+           C -50 1880, -60 1885, -75 1885
+           C -90 1885, -100 1880, -102 1870
+           L -100 1860
+           C -95 1850, -85 1845, -75 1845
            Z" />
 
     <!-- Left Calcaneus -->
@@ -240,14 +241,24 @@ export const feetSVG = `
     <path id="bone_dp5_foot_left" class="bone" data-name="Left DP V" d="M -92 2038 L -110 2038 C -111 2042, -112 2046, -113 2048 C -112 2052, -105 2053, -101 2053 C -97 2053, -90 2052, -89 2048 C -90 2046, -90 2042, -92 2038 Z" />
 
 
+    </g>
+
     <!-- ==================== RIGHT FOOT ==================== -->
+    <g id="foot_right_group" transform="translate(25, 15)">
     <!-- Mirrored from Left (X -> -X) -->
     <!-- Talus at 75 -->
 
     <path id="bone_talus_right" class="bone"
         data-name="Right Talus"
         data-medical-name="Talus Dexter"
-        d="M 75 1860 C 70 1858, 65 1860, 63 1865 L 60 1875 Q 62 1885, 67 1888 L 85 1890 Q 90 1888, 92 1880 L 95 1865 C 93 1860, 87 1858, 80 1860 Z" />
+        d="M 75 1845
+           C 65 1845, 55 1850, 50 1860
+           L 48 1870
+           C 50 1880, 60 1885, 75 1885
+           C 90 1885, 100 1880, 102 1870
+           L 100 1860
+           C 95 1850, 85 1845, 75 1845
+           Z" />
 
     <path id="bone_calcaneus_right" class="bone"
         data-name="Right Calcaneus"
@@ -324,4 +335,5 @@ export const feetSVG = `
     <path id="bone_pp5_foot_right" class="bone" data-name="Right PP V" d="M 96 1994 C 105 1994, 107 1997, 108 2000 L 109 2010 C 110 2014, 107 2016, 105 2016 L 97 2016 C 93 2016, 92 2014, 93 2010 L 94 2000 C 93 1997, 96 1994, 96 1994 Z" />
     <path id="bone_ip5_foot_right" class="bone" data-name="Right MP V" d="M 94 2018 L 108 2018 C 109 2022, 110 2028, 111 2031 C 111 2035, 107 2036, 107 2036 L 95 2036 C 95 2036, 91 2035, 92 2031 C 91 2028, 92 2022, 94 2018 Z" />
     <path id="bone_dp5_foot_right" class="bone" data-name="Right DP V" d="M 92 2038 L 110 2038 C 111 2042, 112 2046, 113 2048 C 112 2052, 105 2053, 101 2053 C 97 2053, 90 2052, 89 2048 C 90 2046, 90 2042, 92 2038 Z" />
+    </g>
 `;

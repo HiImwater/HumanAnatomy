@@ -13,202 +13,175 @@ export const handsSVG = `
 
     <!-- LEFT CARPALS (Wrist) - Proximal Row -->
     <!-- Scaphoid (-307 -> -285) -->
-    <path id="bone_carpal_scaphoid_left" class="bone" data-name="Left Scaphoid" data-medical-name="Os Scaphoideum"
-        d="M -285 917 
-           C -291 915, -293 907, -281 909
-           C -273 910, -271 915, -268 920
-           C -265 925, -273 933, -281 933
-           C -288 933, -291 925, -285 917 Z" />
+    <path id="bone_carpal_scaphoid_left" class="bone" data-name="Left Scaphoid" data-medical-name="Os Scaphoideum" d="M -376.0 1027.3 
+           C -381.2 1023.8, -381.1 1015.5, -370.0 1020.6
+           C -362.6 1023.6, -361.9 1029.0, -360.3 1034.6
+           C -358.7 1040.2, -368.5 1045.8, -376.2 1043.8
+           C -383.0 1041.9, -383.8 1033.4, -376.0 1027.3 Z" />
            
     <!-- Lunate (-288 -> -266) -->
-    <path id="bone_carpal_lunate_left" class="bone" data-name="Left Lunate" data-medical-name="Os Lunatum"
-        d="M -266 920 
-           C -266 913, -261 913, -258 917
-           C -255 921, -255 927, -258 930
-           C -261 933, -266 933, -268 927
-           C -269 923, -268 921, -266 920 Z" />
+    <path id="bone_carpal_lunate_left" class="bone" data-name="Left Lunate" data-medical-name="Os Lunatum" d="M -358.4 1035.1 
+           C -356.6 1028.3, -351.7 1029.6, -349.9 1034.3
+           C -348.0 1038.9, -349.6 1044.7, -353.2 1046.8
+           C -356.9 1048.9, -361.7 1047.6, -362.1 1041.3
+           C -362.1 1037.2, -360.6 1035.5, -358.4 1035.1 Z" />
            
     <!-- Triquetrum (-277 -> -255) -->
-    <path id="bone_carpal_triquetrum_left" class="bone" data-name="Left Triquetrum" data-medical-name="Os Triquetrum"
-        d="M -255 923 
-           C -255 917, -251 915, -248 917
-           C -245 919, -243 925, -245 929
-           C -248 933, -253 931, -255 923 Z" />
+    <path id="bone_carpal_triquetrum_left" class="bone" data-name="Left Triquetrum" data-medical-name="Os Triquetrum" d="M -348.5 1040.8 
+           C -347.0 1035.0, -342.6 1034.1, -340.2 1036.8
+           C -337.8 1039.6, -337.5 1045.9, -340.4 1049.2
+           C -344.4 1052.3, -348.7 1049.1, -348.5 1040.8 Z" />
            
     <!-- Pisiform (-273 -> -251) -->
-    <path id="bone_carpal_pisiform_left" class="bone" data-name="Left Pisiform" data-medical-name="Os Pisiforme"
-        d="M -251 919 C -253 917, -248 915, -246 917 C -244 919, -246 923, -248 923 C -250 923, -252 921, -251 919 Z" />
+    <path id="bone_carpal_pisiform_left" class="bone" data-name="Left Pisiform" data-medical-name="Os Pisiforme" d="M -343.6 1038.0 C -345.0 1035.5, -339.7 1034.9, -338.3 1037.4 C -336.9 1039.8, -339.8 1043.2, -341.8 1042.6 C -343.7 1042.1, -345.1 1039.7, -343.6 1038.0 Z" />
 
     <!-- LEFT CARPALS (Wrist) - Distal Row -->
     <!-- Trapezium (-315 -> -293) -->
-    <path id="bone_carpal_trapezium_left" class="bone" data-name="Left Trapezium" data-medical-name="Os Trapezium"
-        d="M -293 937 
-           C -298 933, -288 930, -281 933
-           C -277 935, -275 940, -277 945
-           C -279 950, -288 950, -293 947
-           C -298 943, -295 940, -293 937 Z" />
+    <path id="bone_carpal_trapezium_left" class="bone" data-name="Left Trapezium" data-medical-name="Os Trapezium" d="M -388.9 1044.5 
+           C -392.7 1039.4, -382.2 1039.0, -376.2 1043.8
+           C -372.9 1046.7, -372.2 1052.1, -375.5 1056.4
+           C -378.7 1060.7, -387.4 1058.4, -391.4 1054.2
+           C -395.2 1049.0, -391.6 1046.9, -388.9 1044.5 Z" />
            
     <!-- Trapezoid (-297 -> -275) -->
-    <path id="bone_carpal_trapezoid_left" class="bone" data-name="Left Trapezoid" data-medical-name="Os Trapezoideum"
-        d="M -275 937 
-           C -275 933, -271 933, -268 937
-           C -265 941, -267 947, -271 947
-           C -275 947, -277 943, -275 937 Z" />
+    <path id="bone_carpal_trapezoid_left" class="bone" data-name="Left Trapezoid" data-medical-name="Os Trapezoideum" d="M -371.5 1049.2 
+           C -370.4 1045.3, -366.6 1046.3, -364.7 1051.0
+           C -362.8 1055.6, -366.3 1060.9, -370.2 1059.9
+           C -374.1 1058.8, -375.0 1054.5, -371.5 1049.2 Z" />
            
     <!-- Capitate (-287 -> -265) -->
-    <path id="bone_carpal_capitate_left" class="bone" data-name="Left Capitate" data-medical-name="Os Capitatum"
-        d="M -265 935 
-           C -265 927, -258 927, -258 935
-           C -258 943, -255 947, -261 947
-           C -267 947, -265 943, -265 935 Z" />
+    <path id="bone_carpal_capitate_left" class="bone" data-name="Left Capitate" data-medical-name="Os Capitatum" d="M -361.3 1049.8 
+           C -359.2 1042.1, -352.5 1043.9, -354.5 1051.6
+           C -356.6 1059.4, -354.7 1064.0, -360.5 1062.5
+           C -366.3 1060.9, -363.4 1057.6, -361.3 1049.8 Z" />
            
     <!-- Hamate (-275 -> -253) -->
-    <path id="bone_carpal_hamate_left" class="bone" data-name="Left Hamate" data-medical-name="Os Hamatum"
-        d="M -253 935 
-           C -253 930, -246 930, -246 935
-           C -246 943, -248 947, -253 947
-           C -258 947, -253 940, -253 935 Z" />
+    <path id="bone_carpal_hamate_left" class="bone" data-name="Left Hamate" data-medical-name="Os Hamatum" d="M -349.7 1052.9 
+           C -348.4 1048.1, -341.6 1049.9, -342.9 1054.7
+           C -345.0 1062.5, -348.0 1065.8, -352.8 1064.5
+           C -357.6 1063.2, -351.0 1057.8, -349.7 1052.9 Z" />
 
 
     <!-- LEFT METACARPALS (Palm) -->
     
     <!-- MC I (Thumb) (-310 -> -288) -->
-    <path id="bone_mc1_left" class="bone" data-name="Left Metacarpal I" data-medical-name="Metacarpale I"
-        d="M -288 953 
-           C -293 960, -295 970, -298 980
-           C -301 987, -291 987, -288 980
-           C -285 970, -283 960, -278 953
-           C -281 950, -285 950, -288 953 Z" />
+    <path id="bone_mc1_left" class="bone" data-name="Left Metacarpal I" data-medical-name="Metacarpale I" d="M -388.2 1061.3 
+           C -394.8 1066.7, -399.3 1075.9, -404.8 1084.8
+           C -409.5 1090.7, -399.9 1093.3, -395.2 1087.3
+           C -389.7 1078.5, -385.2 1069.3, -378.5 1063.9
+           C -380.6 1060.2, -384.5 1059.1, -388.2 1061.3 Z" />
            
     <!-- MC II (Index) (-295 -> -273) -->
-    <path id="bone_mc2_left" class="bone" data-name="Left Metacarpal II" data-medical-name="Metacarpale II"
-        d="M -273 951
-           C -275 965, -277 980, -278 995
-           C -281 1003, -271 1003, -268 995
-           C -267 980, -265 965, -265 951
-           C -268 949, -271 949, -273 951 Z" />
+    <path id="bone_mc2_left" class="bone" data-name="Left Metacarpal II" data-medical-name="Metacarpale II" d="M -373.2 1063.2
+           C -378.7 1076.2, -384.5 1090.2, -389.4 1104.4
+           C -394.3 1111.4, -384.7 1114.0, -379.7 1107.0
+           C -374.9 1092.8, -369.1 1078.8, -365.4 1065.3
+           C -367.8 1062.6, -370.7 1061.8, -373.2 1063.2 Z" />
            
     <!-- MC III (Middle) (-285 -> -263) -->
-    <path id="bone_mc3_left" class="bone" data-name="Left Metacarpal III" data-medical-name="Metacarpale III"
-        d="M -263 951
-           C -263 965, -264 980, -265 1000
-           C -268 1007, -258 1007, -255 1000
-           C -256 980, -257 965, -257 951
-           C -259 949, -261 949, -263 951 Z" />
+    <path id="bone_mc3_left" class="bone" data-name="Left Metacarpal III" data-medical-name="Metacarpale III" d="M -363.5 1065.8
+           C -367.1 1079.3, -372.0 1093.6, -378.1 1112.6
+           C -382.8 1118.6, -373.2 1121.2, -368.5 1115.2
+           C -364.2 1095.6, -361.3 1080.9, -357.7 1067.4
+           C -359.1 1064.9, -361.1 1064.4, -363.5 1065.8 Z" />
            
     <!-- MC IV (Ring) (-275 -> -253) -->
-    <path id="bone_mc4_left" class="bone" data-name="Left Metacarpal IV" data-medical-name="Metacarpale IV"
-        d="M -253 951
-           C -252 965, -251 980, -250 995
-           C -253 1003, -243 1003, -240 995
-           C -243 980, -245 965, -246 951
-           C -248 949, -251 949, -253 951 Z" />
+    <path id="bone_mc4_left" class="bone" data-name="Left Metacarpal IV" data-medical-name="Metacarpale IV" d="M -353.8 1068.4
+           C -356.5 1082.2, -359.4 1096.9, -362.3 1111.7
+           C -367.3 1118.6, -357.6 1121.2, -352.7 1114.3
+           C -351.7 1099.0, -349.7 1084.0, -347.1 1070.2
+           C -348.5 1067.8, -351.4 1067.0, -353.8 1068.4 Z" />
            
     <!-- MC V (Pinky) (-265 -> -243) -->
-    <path id="bone_mc5_left" class="bone" data-name="Left Metacarpal V" data-medical-name="Metacarpale V"
-        d="M -243 951
-           C -241 963, -238 975, -235 987
-           C -238 993, -228 993, -228 987
-           C -231 975, -235 963, -237 951
-           C -239 949, -241 949, -243 951 Z" />
+    <path id="bone_mc5_left" class="bone" data-name="Left Metacarpal V" data-medical-name="Metacarpale V" d="M -344.2 1071.0
+           C -345.4 1083.1, -345.6 1095.5, -345.8 1107.8
+           C -350.2 1112.8, -340.6 1115.4, -339.0 1109.6
+           C -338.8 1097.3, -339.6 1084.6, -338.4 1072.5
+           C -339.8 1070.1, -341.7 1069.6, -344.2 1071.0 Z" />
 
 
     <!-- LEFT PHALANGES (Fingers) -->
     
     <!-- THUMB (I) (-321 -> -299) -->
-    <path id="bone_pp1_left" class="bone" data-name="Left Prox Phalanx I"
-        d="M -299 988 
-           C -303 995, -308 1005, -311 1012
-           C -315 1018, -305 1018, -301 1012
-           C -298 1005, -295 995, -293 988 
-           C -295 985, -297 985, -299 988 Z" />
+    <path id="bone_pp1_left" class="bone" data-name="Left Prox Phalanx I" d="M -407.9 1092.2 
+           C -413.5 1098.0, -420.9 1106.3, -425.7 1112.3
+           C -431.1 1117.1, -421.4 1119.6, -416.0 1114.9
+           C -411.3 1108.9, -405.8 1100.0, -402.1 1093.8 
+           C -403.2 1090.4, -405.1 1089.8, -407.9 1092.2 Z" />
     <!-- (-333 -> -311) -->
-    <path id="bone_dp1_left" class="bone" data-name="Left Dist Phalanx I"
-        d="M -311 1020 
-           C -315 1025, -318 1032, -321 1038 
-           C -323 1042, -313 1042, -311 1038 
-           C -308 1032, -305 1025, -303 1020 
-           C -305 1018, -309 1018, -311 1020 Z" />
+    <path id="bone_dp1_left" class="bone" data-name="Left Dist Phalanx I" d="M -427.7 1120.0 
+           C -432.9 1123.8, -437.6 1129.8, -442.0 1134.8 
+           C -445.0 1138.2, -435.4 1140.8, -432.4 1137.4 
+           C -427.9 1132.4, -423.2 1126.4, -420.0 1122.1 
+           C -421.4 1119.6, -425.3 1118.6, -427.7 1120.0 Z" />
 
     <!-- INDEX (II) (-301 -> -279) -->
-    <path id="bone_pp2_left" class="bone" data-name="Left Prox Phalanx II"
-        d="M -279 1002 
-           C -280 1012, -281 1022, -282 1032
-           C -286 1035, -276 1035, -274 1032
-           C -273 1022, -272 1012, -271 1002 
-           C -273 1000, -277 1000, -279 1002 Z" />
-    <path id="bone_ip2_left" class="bone" data-name="Left Mid Phalanx II"
-        d="M -283 1038 
-           C -284 1045, -285 1052, -285 1058
-           C -289 1060, -279 1060, -277 1058
-           C -277 1052, -276 1045, -275 1038
-           C -277 1036, -281 1036, -283 1038 Z" />
-    <path id="bone_dp2_left" class="bone" data-name="Left Dist Phalanx II"
-        d="M -286 1065 
-           C -287 1068, -287 1072, -286 1075
-           C -286 1078, -279 1078, -279 1075
-           C -278 1072, -278 1068, -279 1065
-           C -281 1062, -284 1062, -286 1065 Z" />
+    <path id="bone_pp2_left" class="bone" data-name="Left Prox Phalanx II" d="M -392.2 1110.9 
+           C -395.7 1120.3, -399.3 1129.7, -402.8 1139.1
+           C -407.5 1141.0, -397.8 1143.6, -395.1 1141.2
+           C -391.5 1131.8, -388.0 1122.4, -384.4 1113.0 
+           C -385.8 1110.5, -389.7 1109.5, -392.2 1110.9 Z" />
+    <path id="bone_ip2_left" class="bone" data-name="Left Mid Phalanx II" d="M -405.3 1144.7 
+           C -408.1 1151.2, -410.9 1157.7, -412.4 1163.5
+           C -416.8 1164.4, -407.2 1166.9, -404.7 1165.5
+           C -403.2 1159.7, -400.4 1153.2, -397.6 1146.7
+           C -399.0 1144.3, -402.9 1143.2, -405.3 1144.7 Z" />
+    <path id="bone_dp2_left" class="bone" data-name="Left Dist Phalanx II" d="M -415.2 1170.0 
+           C -417.0 1172.6, -418.0 1176.5, -417.8 1179.6
+           C -418.6 1182.5, -411.8 1184.3, -411.1 1181.4
+           C -409.3 1178.8, -408.3 1174.9, -408.5 1171.8
+           C -409.6 1168.4, -412.5 1167.6, -415.2 1170.0 Z" />
 
     <!-- MIDDLE (III) (-288 -> -266) -->
-    <path id="bone_pp3_left" class="bone" data-name="Left Prox Phalanx III"
-        d="M -266 1005 
-           C -266 1018, -266 1030, -266 1042
-           C -270 1045, -260 1045, -258 1042
-           C -258 1030, -258 1018, -258 1005
-           C -260 1002, -264 1002, -266 1005 Z" />
-    <path id="bone_ip3_left" class="bone" data-name="Left Mid Phalanx III"
-        d="M -266 1048 
-           C -266 1055, -266 1065, -266 1072
-           C -270 1075, -260 1075, -258 1072
-           C -258 1065, -258 1055, -258 1048
-           C -260 1045, -264 1045, -266 1048 Z" />
-    <path id="bone_dp3_left" class="bone" data-name="Left Dist Phalanx III"
-        d="M -266 1078 
-           C -266 1082, -266 1086, -266 1090
-           C -270 1092, -260 1092, -258 1090
-           C -258 1086, -258 1082, -258 1078
-           C -260 1076, -264 1076, -266 1078 Z" />
+    <path id="bone_pp3_left" class="bone" data-name="Left Prox Phalanx III" d="M -380.4 1117.2 
+           C -383.7 1129.7, -386.8 1141.3, -390.0 1152.9
+           C -394.6 1154.8, -384.9 1157.4, -382.2 1155.0
+           C -379.1 1143.4, -376.0 1131.8, -372.6 1119.3
+           C -373.8 1115.8, -377.7 1114.8, -380.4 1117.2 Z" />
+    <path id="bone_ip3_left" class="bone" data-name="Left Mid Phalanx III" d="M -391.5 1158.7 
+           C -393.3 1165.5, -395.9 1175.1, -397.7 1181.9
+           C -402.4 1183.8, -392.7 1186.4, -390.0 1184.0
+           C -388.2 1177.2, -385.6 1167.6, -383.8 1160.8
+           C -384.9 1157.4, -388.8 1156.3, -391.5 1158.7 Z" />
+    <path id="bone_dp3_left" class="bone" data-name="Left Dist Phalanx III" d="M -399.3 1187.7 
+           C -400.3 1191.6, -401.3 1195.4, -402.4 1199.3
+           C -406.8 1200.2, -397.1 1202.8, -394.6 1201.4
+           C -393.6 1197.5, -392.6 1193.6, -391.5 1189.8
+           C -393.0 1187.3, -396.8 1186.3, -399.3 1187.7 Z" />
 
     <!-- RING (IV) (-273 -> -251) -->
-    <path id="bone_pp4_left" class="bone" data-name="Left Prox Phalanx IV"
-        d="M -251 1002 
-           C -250 1012, -249 1022, -248 1032
-           C -252 1035, -242 1035, -240 1032
-           C -241 1022, -242 1012, -243 1002
-           C -245 1000, -249 1000, -251 1002 Z" />
-    <path id="bone_ip4_left" class="bone" data-name="Left Mid Phalanx IV"
-        d="M -247 1038 
-           C -246 1045, -245 1052, -245 1058
-           C -249 1060, -239 1060, -237 1058
-           C -237 1052, -238 1045, -239 1038
-           C -241 1036, -245 1036, -247 1038 Z" />
-    <path id="bone_dp4_left" class="bone" data-name="Left Dist Phalanx IV"
-        d="M -244 1065 
-           C -243 1068, -243 1072, -242 1075
-           C -242 1078, -235 1078, -235 1075
-           C -234 1072, -234 1068, -235 1065
-           C -237 1062, -241 1062, -244 1065 Z" />
+    <path id="bone_pp4_left" class="bone" data-name="Left Prox Phalanx IV" d="M -365.1 1118.2 
+           C -366.7 1128.1, -368.4 1138.0, -370.0 1147.9
+           C -374.6 1149.8, -365.0 1152.4, -362.3 1150.0
+           C -360.6 1140.1, -359.0 1130.2, -357.4 1120.2
+           C -358.8 1117.8, -362.7 1116.8, -365.1 1118.2 Z" />
+    <path id="bone_ip4_left" class="bone" data-name="Left Mid Phalanx IV" d="M -370.6 1154.0 
+           C -371.4 1161.0, -372.3 1168.0, -373.8 1173.8
+           C -378.2 1174.7, -368.5 1177.3, -366.1 1175.9
+           C -364.5 1170.1, -363.7 1163.1, -362.8 1156.0
+           C -364.3 1153.6, -368.1 1152.6, -370.6 1154.0 Z" />
+    <path id="bone_dp4_left" class="bone" data-name="Left Dist Phalanx IV" d="M -374.7 1180.8 
+           C -374.5 1184.0, -375.5 1187.9, -375.3 1191.0
+           C -376.1 1193.9, -369.3 1195.7, -368.6 1192.8
+           C -366.8 1190.2, -365.8 1186.3, -366.0 1183.2
+           C -367.1 1179.7, -371.0 1178.7, -374.7 1180.8 Z" />
 
     <!-- PINKY (V) (-257 -> -235) -->
-    <path id="bone_pp5_left" class="bone" data-name="Left Prox Phalanx V"
-        d="M -235 990 
-           C -233 998, -228 1005, -225 1012
-           C -228 1018, -218 1018, -215 1012
-           C -218 1005, -223 998, -227 990 
-           C -229 988, -233 988, -235 990 Z" />
-    <path id="bone_ip5_left" class="bone" data-name="Left Mid Phalanx V"
-        d="M -223 1020 
-           C -221 1025, -218 1032, -215 1038 
-           C -218 1042, -208 1042, -205 1038 
-           C -208 1032, -211 1025, -213 1020 
-           C -215 1018, -221 1018, -223 1020 Z" />
-    <path id="bone_dp5_left" class="bone" data-name="Left Dist Phalanx V"
-        d="M -213 1045 
-           C -211 1048, -209 1052, -208 1055 
-           C -208 1058, -201 1058, -201 1055 
-           C -202 1052, -204 1048, -205 1045 
-           C -207 1042, -211 1042, -213 1045 Z" />
+    <path id="bone_pp5_left" class="bone" data-name="Left Prox Phalanx V" d="M -346.6 1110.7 
+           C -346.7 1119.0, -343.7 1127.0, -342.6 1134.6
+           C -347.0 1139.6, -337.4 1142.2, -332.9 1137.1
+           C -334.0 1129.6, -337.0 1121.6, -338.8 1112.8 
+           C -340.2 1110.3, -344.1 1109.3, -346.6 1110.7 Z" />
+    <path id="bone_ip5_left" class="bone" data-name="Left Mid Phalanx V" d="M -342.7 1142.8 
+           C -342.1 1148.2, -341.0 1155.7, -339.7 1162.3 
+           C -343.6 1165.3, -333.9 1167.9, -330.0 1164.8 
+           C -331.3 1158.3, -332.4 1150.7, -333.1 1145.4 
+           C -334.5 1142.9, -340.3 1141.4, -342.7 1142.8 Z" />
+    <path id="bone_dp5_left" class="bone" data-name="Left Dist Phalanx V" d="M -339.5 1169.5 
+           C -338.4 1173.0, -337.5 1177.3, -337.3 1180.5 
+           C -338.1 1183.4, -331.3 1185.2, -330.5 1182.3 
+           C -330.7 1179.1, -331.6 1174.8, -331.8 1171.6 
+           C -333.0 1168.2, -336.8 1167.2, -339.5 1169.5 Z" />
 
 
     <!-- 
@@ -217,180 +190,153 @@ export const handsSVG = `
     -->
 
     <!-- RIGHT CARPALS (Wrist) - Proximal Row -->
-    <path id="bone_carpal_scaphoid_right" class="bone" data-name="Right Scaphoid" data-medical-name="Os Scaphoideum"
-        d="M 285 917 
-           C 291 915, 293 907, 281 909
-           C 273 910, 271 915, 268 920
-           C 265 925, 273 933, 281 933
-           C 288 933, 291 925, 285 917 Z" />
+    <path id="bone_carpal_scaphoid_right" class="bone" data-name="Right Scaphoid" data-medical-name="Os Scaphoideum" d="M 376.0 1027.3 
+           C 381.2 1023.8, 381.1 1015.5, 370.0 1020.6
+           C 362.6 1023.6, 361.9 1029.0, 360.3 1034.6
+           C 358.7 1040.2, 368.5 1045.8, 376.2 1043.8
+           C 383.0 1041.9, 383.8 1033.4, 376.0 1027.3 Z" />
            
-    <path id="bone_carpal_lunate_right" class="bone" data-name="Right Lunate" data-medical-name="Os Lunatum"
-        d="M 266 920 
-           C 266 913, 261 913, 258 917
-           C 255 921, 255 927, 258 930
-           C 261 933, 266 933, 268 927
-           C 269 923, 268 921, 266 920 Z" />
+    <path id="bone_carpal_lunate_right" class="bone" data-name="Right Lunate" data-medical-name="Os Lunatum" d="M 358.4 1035.1 
+           C 356.6 1028.3, 351.7 1029.6, 349.9 1034.3
+           C 348.0 1038.9, 349.6 1044.7, 353.2 1046.8
+           C 356.9 1048.9, 361.7 1047.6, 362.1 1041.3
+           C 362.1 1037.2, 360.6 1035.5, 358.4 1035.1 Z" />
            
-    <path id="bone_carpal_triquetrum_right" class="bone" data-name="Right Triquetrum" data-medical-name="Os Triquetrum"
-        d="M 255 923 
-           C 255 917, 251 915, 248 917
-           C 245 919, 243 925, 245 929
-           C 248 933, 253 931, 255 923 Z" />
+    <path id="bone_carpal_triquetrum_right" class="bone" data-name="Right Triquetrum" data-medical-name="Os Triquetrum" d="M 348.5 1040.8 
+           C 347.0 1035.0, 342.6 1034.1, 340.2 1036.8
+           C 337.8 1039.6, 337.5 1045.9, 340.4 1049.2
+           C 344.4 1052.3, 348.7 1049.1, 348.5 1040.8 Z" />
            
-    <path id="bone_carpal_pisiform_right" class="bone" data-name="Right Pisiform" data-medical-name="Os Pisiforme"
-        d="M 251 919 C 253 917, 248 915, 246 917 C 244 919, 246 923, 248 923 C 250 923, 252 921, 251 919 Z" />
+    <path id="bone_carpal_pisiform_right" class="bone" data-name="Right Pisiform" data-medical-name="Os Pisiforme" d="M 343.6 1038.0 C 345.0 1035.5, 339.7 1034.9, 338.3 1037.4 C 336.9 1039.8, 339.8 1043.2, 341.8 1042.6 C 343.7 1042.1, 345.1 1039.7, 343.6 1038.0 Z" />
 
     <!-- RIGHT CARPALS (Wrist) - Distal Row -->
-    <path id="bone_carpal_trapezium_right" class="bone" data-name="Right Trapezium" data-medical-name="Os Trapezium"
-        d="M 293 937 
-           C 298 933, 288 930, 281 933
-           C 277 935, 275 940, 277 945
-           C 279 950, 288 950, 293 947
-           C 298 943, 295 940, 293 937 Z" />
+    <path id="bone_carpal_trapezium_right" class="bone" data-name="Right Trapezium" data-medical-name="Os Trapezium" d="M 388.9 1044.5 
+           C 392.7 1039.4, 382.2 1039.0, 376.2 1043.8
+           C 372.9 1046.7, 372.2 1052.1, 375.5 1056.4
+           C 378.7 1060.7, 387.4 1058.4, 391.4 1054.2
+           C 395.2 1049.0, 391.6 1046.9, 388.9 1044.5 Z" />
            
-    <path id="bone_carpal_trapezoid_right" class="bone" data-name="Right Trapezoid" data-medical-name="Os Trapezoideum"
-        d="M 275 937 
-           C 275 933, 271 933, 268 937
-           C 265 941, 267 947, 271 947
-           C 275 947, 277 943, 275 937 Z" />
+    <path id="bone_carpal_trapezoid_right" class="bone" data-name="Right Trapezoid" data-medical-name="Os Trapezoideum" d="M 371.5 1049.2 
+           C 370.4 1045.3, 366.6 1046.3, 364.7 1051.0
+           C 362.8 1055.6, 366.3 1060.9, 370.2 1059.9
+           C 374.1 1058.8, 375.0 1054.5, 371.5 1049.2 Z" />
            
-    <path id="bone_carpal_capitate_right" class="bone" data-name="Right Capitate" data-medical-name="Os Capitatum"
-        d="M 265 935 
-           C 265 927, 258 927, 258 935
-           C 258 943, 255 947, 261 947
-           C 267 947, 265 943, 265 935 Z" />
+    <path id="bone_carpal_capitate_right" class="bone" data-name="Right Capitate" data-medical-name="Os Capitatum" d="M 361.3 1049.8 
+           C 359.2 1042.1, 352.5 1043.9, 354.5 1051.6
+           C 356.6 1059.4, 354.7 1064.0, 360.5 1062.5
+           C 366.3 1060.9, 363.4 1057.6, 361.3 1049.8 Z" />
            
-    <path id="bone_carpal_hamate_right" class="bone" data-name="Right Hamate" data-medical-name="Os Hamatum"
-        d="M 253 935 
-           C 253 930, 246 930, 246 935
-           C 246 943, 248 947, 253 947
-           C 258 947, 253 940, 253 935 Z" />
+    <path id="bone_carpal_hamate_right" class="bone" data-name="Right Hamate" data-medical-name="Os Hamatum" d="M 349.7 1052.9 
+           C 348.4 1048.1, 341.6 1049.9, 342.9 1054.7
+           C 345.0 1062.5, 348.0 1065.8, 352.8 1064.5
+           C 357.6 1063.2, 351.0 1057.8, 349.7 1052.9 Z" />
 
 
     <!-- RIGHT METACARPALS (Palm) -->
-    <path id="bone_mc1_right" class="bone" data-name="Right Metacarpal I" data-medical-name="Metacarpale I"
-        d="M 288 953 
-           C 293 960, 295 970, 298 980
-           C 301 987, 291 987, 288 980
-           C 285 970, 283 960, 278 953
-           C 281 950, 285 950, 288 953 Z" />
+    <path id="bone_mc1_right" class="bone" data-name="Right Metacarpal I" data-medical-name="Metacarpale I" d="M 388.2 1061.3 
+           C 394.8 1066.7, 399.3 1075.9, 404.8 1084.8
+           C 409.5 1090.7, 399.9 1093.3, 395.2 1087.3
+           C 389.7 1078.5, 385.2 1069.3, 378.5 1063.9
+           C 380.6 1060.2, 384.5 1059.1, 388.2 1061.3 Z" />
            
-    <path id="bone_mc2_right" class="bone" data-name="Right Metacarpal II" data-medical-name="Metacarpale II"
-        d="M 273 951
-           C 275 965, 277 980, 278 995
-           C 281 1003, 271 1003, 268 995
-           C 267 980, 265 965, 265 951
-           C 268 949, 271 949, 273 951 Z" />
+    <path id="bone_mc2_right" class="bone" data-name="Right Metacarpal II" data-medical-name="Metacarpale II" d="M 373.2 1063.2
+           C 378.7 1076.2, 384.5 1090.2, 389.4 1104.4
+           C 394.3 1111.4, 384.7 1114.0, 379.7 1107.0
+           C 374.9 1092.8, 369.1 1078.8, 365.4 1065.3
+           C 367.8 1062.6, 370.7 1061.8, 373.2 1063.2 Z" />
            
-    <path id="bone_mc3_right" class="bone" data-name="Right Metacarpal III" data-medical-name="Metacarpale III"
-        d="M 263 951
-           C 263 965, 264 980, 265 1000
-           C 268 1007, 258 1007, 255 1000
-           C 256 980, 257 965, 257 951
-           C 259 949, 261 949, 263 951 Z" />
+    <path id="bone_mc3_right" class="bone" data-name="Right Metacarpal III" data-medical-name="Metacarpale III" d="M 363.5 1065.8
+           C 367.1 1079.3, 372.0 1093.6, 378.1 1112.6
+           C 382.8 1118.6, 373.2 1121.2, 368.5 1115.2
+           C 364.2 1095.6, 361.3 1080.9, 357.7 1067.4
+           C 359.1 1064.9, 361.1 1064.4, 363.5 1065.8 Z" />
            
-    <path id="bone_mc4_right" class="bone" data-name="Right Metacarpal IV" data-medical-name="Metacarpale IV"
-        d="M 253 951
-           C 252 965, 251 980, 250 995
-           C 253 1003, 243 1003, 240 995
-           C 243 980, 245 965, 246 951
-           C 248 949, 251 949, 253 951 Z" />
+    <path id="bone_mc4_right" class="bone" data-name="Right Metacarpal IV" data-medical-name="Metacarpale IV" d="M 353.8 1068.4
+           C 356.5 1082.2, 359.4 1096.9, 362.3 1111.7
+           C 367.3 1118.6, 357.6 1121.2, 352.7 1114.3
+           C 351.7 1099.0, 349.7 1084.0, 347.1 1070.2
+           C 348.5 1067.8, 351.4 1067.0, 353.8 1068.4 Z" />
            
-    <path id="bone_mc5_right" class="bone" data-name="Right Metacarpal V" data-medical-name="Metacarpale V"
-        d="M 243 951
-           C 241 963, 238 975, 235 987
-           C 238 993, 228 993, 228 987
-           C 231 975, 235 963, 237 951
-           C 239 949, 241 949, 243 951 Z" />
+    <path id="bone_mc5_right" class="bone" data-name="Right Metacarpal V" data-medical-name="Metacarpale V" d="M 344.2 1071.0
+           C 345.4 1083.1, 345.6 1095.5, 345.8 1107.8
+           C 350.2 1112.8, 340.6 1115.4, 339.0 1109.6
+           C 338.8 1097.3, 339.6 1084.6, 338.4 1072.5
+           C 339.8 1070.1, 341.7 1069.6, 344.2 1071.0 Z" />
 
 
     <!-- RIGHT PHALANGES (Fingers) -->
-    <path id="bone_pp1_right" class="bone" data-name="Right Prox Phalanx I"
-        d="M 299 988 
-           C 303 995, 308 1005, 311 1012
-           C 315 1018, 305 1018, 301 1012
-           C 298 1005, 295 995, 293 988 
-           C 295 985, 297 985, 299 988 Z" />
-    <path id="bone_dp1_right" class="bone" data-name="Right Dist Phalanx I"
-        d="M 311 1020 
-           C 315 1025, 318 1032, 321 1038 
-           C 323 1042, 313 1042, 311 1038 
-           C 308 1032, 305 1025, 303 1020 
-           C 305 1018, 309 1018, 311 1020 Z" />
+    <path id="bone_pp1_right" class="bone" data-name="Right Prox Phalanx I" d="M 407.9 1092.2 
+           C 413.5 1098.0, 420.9 1106.3, 425.7 1112.3
+           C 431.1 1117.1, 421.4 1119.6, 416.0 1114.9
+           C 411.3 1108.9, 405.8 1100.0, 402.1 1093.8 
+           C 403.2 1090.4, 405.1 1089.8, 407.9 1092.2 Z" />
+    <path id="bone_dp1_right" class="bone" data-name="Right Dist Phalanx I" d="M 427.7 1120.0 
+           C 432.9 1123.8, 437.6 1129.8, 442.0 1134.8 
+           C 445.0 1138.2, 435.4 1140.8, 432.4 1137.4 
+           C 427.9 1132.4, 423.2 1126.4, 420.0 1122.1 
+           C 421.4 1119.6, 425.3 1118.6, 427.7 1120.0 Z" />
 
-    <path id="bone_pp2_right" class="bone" data-name="Right Prox Phalanx II"
-        d="M 279 1002 
-           C 280 1012, 281 1022, 282 1032
-           C 286 1035, 276 1035, 274 1032
-           C 273 1022, 272 1012, 271 1002 
-           C 273 1000, 277 1000, 279 1002 Z" />
-    <path id="bone_ip2_right" class="bone" data-name="Right Mid Phalanx II"
-        d="M 283 1038 
-           C 284 1045, 285 1052, 285 1058
-           C 289 1060, 279 1060, 277 1058
-           C 277 1052, 276 1045, 275 1038
-           C 277 1036, 281 1036, 283 1038 Z" />
-    <path id="bone_dp2_right" class="bone" data-name="Right Dist Phalanx II"
-        d="M 286 1065 
-           C 287 1068, 287 1072, 286 1075
-           C 286 1078, 279 1078, 279 1075
-           C 278 1072, 278 1068, 279 1065
-           C 281 1062, 284 1062, 286 1065 Z" />
+    <path id="bone_pp2_right" class="bone" data-name="Right Prox Phalanx II" d="M 392.2 1110.9 
+           C 395.7 1120.3, 399.3 1129.7, 402.8 1139.1
+           C 407.5 1141.0, 397.8 1143.6, 395.1 1141.2
+           C 391.5 1131.8, 388.0 1122.4, 384.4 1113.0 
+           C 385.8 1110.5, 389.7 1109.5, 392.2 1110.9 Z" />
+    <path id="bone_ip2_right" class="bone" data-name="Right Mid Phalanx II" d="M 405.3 1144.7 
+           C 408.1 1151.2, 410.9 1157.7, 412.4 1163.5
+           C 416.8 1164.4, 407.2 1166.9, 404.7 1165.5
+           C 403.2 1159.7, 400.4 1153.2, 397.6 1146.7
+           C 399.0 1144.3, 402.9 1143.2, 405.3 1144.7 Z" />
+    <path id="bone_dp2_right" class="bone" data-name="Right Dist Phalanx II" d="M 415.2 1170.0 
+           C 417.0 1172.6, 418.0 1176.5, 417.8 1179.6
+           C 418.6 1182.5, 411.8 1184.3, 411.1 1181.4
+           C 409.3 1178.8, 408.3 1174.9, 408.5 1171.8
+           C 409.6 1168.4, 412.5 1167.6, 415.2 1170.0 Z" />
 
-    <path id="bone_pp3_right" class="bone" data-name="Right Prox Phalanx III"
-        d="M 266 1005 
-           C 266 1018, 266 1030, 266 1042
-           C 270 1045, 260 1045, 258 1042
-           C 258 1030, 258 1018, 258 1005
-           C 260 1002, 264 1002, 266 1005 Z" />
-    <path id="bone_ip3_right" class="bone" data-name="Right Mid Phalanx III"
-        d="M 266 1048 
-           C 266 1055, 266 1065, 266 1072
-           C 270 1075, 260 1075, 258 1072
-           C 258 1065, 258 1055, 258 1048
-           C 260 1045, 264 1045, 266 1048 Z" />
-    <path id="bone_dp3_right" class="bone" data-name="Right Dist Phalanx III"
-        d="M 266 1078 
-           C 266 1082, 266 1086, 266 1090
-           C 270 1092, 260 1092, 258 1090
-           C 258 1086, 258 1082, 258 1078
-           C 260 1076, 264 1076, 266 1078 Z" />
+    <path id="bone_pp3_right" class="bone" data-name="Right Prox Phalanx III" d="M 380.4 1117.2 
+           C 383.7 1129.7, 386.8 1141.3, 390.0 1152.9
+           C 394.6 1154.8, 384.9 1157.4, 382.2 1155.0
+           C 379.1 1143.4, 376.0 1131.8, 372.6 1119.3
+           C 373.8 1115.8, 377.7 1114.8, 380.4 1117.2 Z" />
+    <path id="bone_ip3_right" class="bone" data-name="Right Mid Phalanx III" d="M 391.5 1158.7 
+           C 393.3 1165.5, 395.9 1175.1, 397.7 1181.9
+           C 402.4 1183.8, 392.7 1186.4, 390.0 1184.0
+           C 388.2 1177.2, 385.6 1167.6, 383.8 1160.8
+           C 384.9 1157.4, 388.8 1156.3, 391.5 1158.7 Z" />
+    <path id="bone_dp3_right" class="bone" data-name="Right Dist Phalanx III" d="M 399.3 1187.7 
+           C 400.3 1191.6, 401.3 1195.4, 402.4 1199.3
+           C 406.8 1200.2, 397.1 1202.8, 394.6 1201.4
+           C 393.6 1197.5, 392.6 1193.6, 391.5 1189.8
+           C 393.0 1187.3, 396.8 1186.3, 399.3 1187.7 Z" />
 
-    <path id="bone_pp4_right" class="bone" data-name="Right Prox Phalanx IV"
-        d="M 251 1002 
-           C 250 1012, 249 1022, 248 1032
-           C 252 1035, 242 1035, 240 1032
-           C 241 1022, 242 1012, 243 1002
-           C 245 1000, 249 1000, 251 1002 Z" />
-    <path id="bone_ip4_right" class="bone" data-name="Right Mid Phalanx IV"
-        d="M 247 1038 
-           C 246 1045, 245 1052, 245 1058
-           C 249 1060, 239 1060, 237 1058
-           C 237 1052, 238 1045, 239 1038
-           C 241 1036, 245 1036, 247 1038 Z" />
-    <path id="bone_dp4_right" class="bone" data-name="Right Dist Phalanx IV"
-        d="M 244 1065 
-           C 243 1068, 243 1072, 242 1075
-           C 242 1078, 235 1078, 235 1075
-           C 234 1072, 234 1068, 235 1065
-           C 237 1062, 241 1062, 244 1065 Z" />
+    <path id="bone_pp4_right" class="bone" data-name="Right Prox Phalanx IV" d="M 365.1 1118.2 
+           C 366.7 1128.1, 368.4 1138.0, 370.0 1147.9
+           C 374.6 1149.8, 365.0 1152.4, 362.3 1150.0
+           C 360.6 1140.1, 359.0 1130.2, 357.4 1120.2
+           C 358.8 1117.8, 362.7 1116.8, 365.1 1118.2 Z" />
+    <path id="bone_ip4_right" class="bone" data-name="Right Mid Phalanx IV" d="M 370.6 1154.0 
+           C 371.4 1161.0, 372.3 1168.0, 373.8 1173.8
+           C 378.2 1174.7, 368.5 1177.3, 366.1 1175.9
+           C 364.5 1170.1, 363.7 1163.1, 362.8 1156.0
+           C 364.3 1153.6, 368.1 1152.6, 370.6 1154.0 Z" />
+    <path id="bone_dp4_right" class="bone" data-name="Right Dist Phalanx IV" d="M 374.7 1180.8 
+           C 374.5 1184.0, 375.5 1187.9, 375.3 1191.0
+           C 376.1 1193.9, 369.3 1195.7, 368.6 1192.8
+           C 366.8 1190.2, 365.8 1186.3, 366.0 1183.2
+           C 367.1 1179.7, 371.0 1178.7, 374.7 1180.8 Z" />
 
-    <path id="bone_pp5_right" class="bone" data-name="Right Prox Phalanx V"
-        d="M 235 990 
-           C 233 998, 228 1005, 225 1012
-           C 228 1018, 218 1018, 215 1012
-           C 218 1005, 223 998, 227 990 
-           C 229 988, 233 988, 235 990 Z" />
-    <path id="bone_ip5_right" class="bone" data-name="Right Mid Phalanx V"
-        d="M 223 1020 
-           C 221 1025, 218 1032, 215 1038 
-           C 218 1042, 208 1042, 205 1038 
-           C 208 1032, 211 1025, 213 1020 
-           C 215 1018, 221 1018, 223 1020 Z" />
-    <path id="bone_dp5_right" class="bone" data-name="Right Dist Phalanx V"
-        d="M 213 1045 
-           C 211 1048, 209 1052, 208 1055 
-           C 208 1058, 201 1058, 201 1055 
-           C 202 1052, 204 1048, 205 1045 
-           C 207 1042, 211 1042, 213 1045 Z" />
+    <path id="bone_pp5_right" class="bone" data-name="Right Prox Phalanx V" d="M 346.6 1110.7 
+           C 346.7 1119.0, 343.7 1127.0, 342.6 1134.6
+           C 347.0 1139.6, 337.4 1142.2, 332.9 1137.1
+           C 334.0 1129.6, 337.0 1121.6, 338.8 1112.8 
+           C 340.2 1110.3, 344.1 1109.3, 346.6 1110.7 Z" />
+    <path id="bone_ip5_right" class="bone" data-name="Right Mid Phalanx V" d="M 342.7 1142.8 
+           C 342.1 1148.2, 341.0 1155.7, 339.7 1162.3 
+           C 343.6 1165.3, 333.9 1167.9, 330.0 1164.8 
+           C 331.3 1158.3, 332.4 1150.7, 333.1 1145.4 
+           C 334.5 1142.9, 340.3 1141.4, 342.7 1142.8 Z" />
+    <path id="bone_dp5_right" class="bone" data-name="Right Dist Phalanx V" d="M 339.5 1169.5 
+           C 338.4 1173.0, 337.5 1177.3, 337.3 1180.5 
+           C 338.1 1183.4, 331.3 1185.2, 330.5 1182.3 
+           C 330.7 1179.1, 331.6 1174.8, 331.8 1171.6 
+           C 333.0 1168.2, 336.8 1167.2, 339.5 1169.5 Z" />
 `;

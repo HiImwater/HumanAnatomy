@@ -28,13 +28,13 @@ export const upperAbdominalOrgansSVG = `
 
 
     <!-- SPLEEN
-         Placement: LUQ, Ribs 9-11. Y=580-630.
+         Placement: LUQ, Ribs 9-11. Y=580-615 (Corrected Anatomic Scale).
     -->
     <path id="organ_spleen" class="organ" data-name="Spleen" data-medical-name="Lien"
-        d="M -90 590
-           C -120 590, -130 610, -120 630
-           C -110 650, -90 640, -80 620
-           C -75 610, -80 595, -90 590
+        d="M -90 580
+           C -120 580, -130 600, -120 615
+           C -110 615, -90 610, -80 600
+           C -75 595, -80 585, -90 580
            Z"
         fill="#7b3f46" stroke="#5a2e33" stroke-width="1">
         <title>Spleen</title>
@@ -59,7 +59,7 @@ export const upperAbdominalOrgansSVG = `
 
 
     <!-- LIVER
-         Placement: RUQ, largest organ. Y=530-700.
+         Placement: RUQ, largest organ. Y=530-640 (Corrected Inferior Border).
          Right Lobe (large), Left Lobe (small, crosses midline).
     -->
     <path id="organ_liver" class="organ" data-name="Liver" data-medical-name="Hepar"
@@ -69,7 +69,7 @@ export const upperAbdominalOrgansSVG = `
            L -60 570
            L -10 590       
            L 40 580        
-           C 50 630, 90 650, 125 580   
+           C 50 620, 90 640, 125 580   
            Z"
         fill="url(#liverTexture)" fill-color="#8b4513" stroke="#5e2f0d" stroke-width="1.5">
         <title>Liver</title>

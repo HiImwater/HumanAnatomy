@@ -1,32 +1,60 @@
 export const scapulaeSVG = `
-    <!-- Scapula (Shoulder Blade) -->
-    <path id="bone_scapula_left" class="bone" data-name="Left Scapula" data-medical-name="Scapula Sinister"
-        d="M -110 350
-           L -165 340
-           L -175 330
-           L -180 335
-           L -185 345
-           L -175 360
-           L -170 400
-           L -155 480
-           Q -130 470, -110 450
-           L -110 350
-           Z
-           M -112 360 L -170 350 L -180 330 Z" />
+    <!-- 
+        SCAPULA (Shoulder Blade) - Anatomically Enhanced
+        - Anterior View
+        - Includes: Acromion, Coracoid Process, Glenoid Fossa, Subscapular Fossa.
+        - Articulation: Acromion meets Clavicle; Glenoid meets Humerus.
+    -->
 
+    <!-- Left Scapula -->
+    <path id="bone_scapula_left" class="bone" data-name="Left Scapula" data-medical-name="Scapula Sinister"
+        d="M -110 345
+           L -115 480
+           Q -115 485, -125 490
+           L -135 480
+           L -170 390
+           L -180 375
+           L -180 355
+           L -172 350
+           
+           C -175 355, -165 365, -158 360
+           Q -155 355, -150 350
+
+           L -135 348
+           L -110 345
+           
+           M -140 350
+           L -170 335
+           L -185 335
+           L -190 345
+           Q -185 350, -180 355
+           Z"
+        fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
+
+    <!-- Right Scapula (Mirrored) -->
     <path id="bone_scapula_right" class="bone" data-name="Right Scapula" data-medical-name="Scapula Dexter"
-        d="M 110 350
-           L 165 340
-           L 175 330
-           L 180 335
-           L 185 345
-           L 175 360
-           L 170 400
-           L 155 480
-           Q 130 470, 110 450
-           L 110 350
-           Z
-           M 112 360 L 170 350 L 180 330 Z" />
+        d="M 110 345
+           L 115 480
+           Q 115 485, 125 490
+           L 135 480
+           L 170 390
+           L 180 375
+           L 180 355
+           L 172 350
+           
+           C 175 355, 165 365, 158 360
+           Q 155 355, 150 350
+           
+           L 135 348
+           L 110 345
+           
+           M 140 350
+           L 170 335
+           L 185 335
+           L 190 345
+           Q 185 350, 180 355
+           Z"
+        fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
 `;
 
 export const upperLimbsSVG = `
@@ -62,18 +90,11 @@ export const upperLimbsSVG = `
     <!-- Left Humerus -->
     <path id="bone_humerus_left" class="bone" data-name="Left Humerus" data-medical-name="Humerus Sinister"
         d="M -180 345
-           C -165 335, -155 345, -155 370
-           C -155 390, -165 400, -170 405
-           L -185 450
-           L -195 480
-           C -200 490, -205 500, -198 510
-           L -205 630
-           C -190 640, -180 650, -180 665
-           C -185 680, -200 685, -210 685
-           C -220 685, -230 680, -235 670
-           C -240 660, -238 650, -230 630
-           L -220 450
-           C -225 400, -230 380, -225 365
+           C -200 335, -215 350, -210 380
+           Q -210 500, -305 760
+           C -320 770, -335 765, -330 741
+           Q -300 755, -286 741
+           L -225 365
            C -220 350, -200 345, -195 345
            L -180 345
            Z" />
@@ -81,18 +102,11 @@ export const upperLimbsSVG = `
     <!-- Right Humerus -->
     <path id="bone_humerus_right" class="bone" data-name="Right Humerus" data-medical-name="Humerus Dexter"
         d="M 180 345
-           C 165 335, 155 345, 155 370
-           C 155 390, 165 400, 170 405
-           L 185 450
-           L 195 480
-           C 200 490, 205 500, 198 510
-           L 205 630
-           C 190 640, 180 650, 180 665
-           C 185 680, 200 685, 210 685
-           C 220 685, 230 680, 235 670
-           C 240 660, 238 650, 230 630
-           L 220 450
-           C 225 400, 230 380, 225 365
+           C 200 335, 215 350, 210 380
+           Q 210 500, 305 760
+           C 320 770, 335 765, 330 741
+           Q 300 755, 286 741
+           L 225 365
            C 220 350, 200 345, 195 345
            L 180 345
            Z" />
@@ -105,66 +119,43 @@ export const upperLimbsSVG = `
     -->
 
     <!-- Left Radius (Lateral) -->
-    <!-- Continuous Path: Head -> Neck -> Tuberosity -> Shaft -> Styloid -> Ulnar Notch -> Shaft -> Neck -> Head -->
     <path id="bone_radius_left" class="bone" data-name="Left Radius" data-medical-name="Radius Sinister" 
-        d="M -235 670                  
-           L -245 670                  
-           C -248 680, -248 685, -242 690 
-           L -245 705                  
-           C -245 745, -260 775, -270 815 
-           C -275 855, -275 885, -282 895 
-           L -288 915                  
-           L -260 910                  
-           C -255 880, -240 840, -230 800 
-           C -225 760, -225 740, -235 730 
-           L -230 710                  
-           L -228 690                  
-           C -230 690, -232 690, -235 670 
+        d="M -300 760
+           C -320 760, -320 775, -305 775
+           L -302 790
+           C -315 800, -345 900, -369 1050
+           L -340 1060
+           L -286 765
            Z" />
 
     <!-- Left Ulna (Medial) -->
     <path id="bone_ulna_left" class="bone" data-name="Left Ulna" data-medical-name="Ulna Sinister" 
-        d="M -205 660
-           C -225 660, -230 670, -225 680 
-           C -222 685, -220 690, -218 695 
-           C -218 735, -230 775, -240 815 
-           L -252 895                  
-           L -254 912                  
-           L -245 908
-           L -240 890
-           C -220 850, -200 780, -195 720 
-           C -195 700, -192 680, -205 660 
+        d="M -286 741
+           C -305 730, -315 750, -305 760
+           L -350 1040
+           L -330 1045
+           L -270 750
+           Q -275 735, -286 741
            Z" />
 
     <!-- Right Radius -->
     <path id="bone_radius_right" class="bone" data-name="Right Radius" data-medical-name="Radius Dexter" 
-        d="M 235 670
-           L 245 670
-           C 248 680, 248 685, 242 690
-           L 245 705
-           C 245 745, 260 775, 270 815
-           C 275 855, 275 885, 282 895
-           L 288 915
-           L 260 910
-           C 255 880, 240 840, 230 800
-           C 225 760, 225 740, 235 730
-           L 230 710
-           L 228 690
-           C 230 690, 232 690, 235 670
+        d="M 300 760
+           C 320 760, 320 775, 305 775
+           L 302 790
+           C 315 800, 345 900, 369 1050
+           L 340 1060
+           L 286 765
            Z" />
 
     <!-- Right Ulna -->
     <path id="bone_ulna_right" class="bone" data-name="Right Ulna" data-medical-name="Ulna Dexter" 
-        d="M 205 660
-           C 225 660, 230 670, 225 680
-           C 222 685, 220 690, 218 695
-           C 218 735, 230 775, 240 815
-           L 252 895
-           L 254 912
-           L 245 908
-           L 240 890
-           C 220 850, 200 780, 195 720
-           C 195 700, 192 680, 205 660
+        d="M 286 741
+           C 305 730, 315 750, 305 760
+           L 350 1040
+           L 330 1045
+           L 270 750
+           Q 275 735, 286 741
            Z" />
 `;
 

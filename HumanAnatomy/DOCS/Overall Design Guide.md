@@ -1,105 +1,116 @@
 # Human Anatomy SVG Structure Guide
 
-This document serves as the master blueprint for reconstructing the human body in SVG. We will follow a hierarchical approach, building from the bones outward.
+This document serves as the master blueprint for reconstructing the human body in SVG. We will follow a hierarchical approach, building from the bones outward, integrating both physiological and esoteric anatomical systems.
 
 ## Global Settings
 - **Subject**: Adult Male, 6ft (approx. 183cm), 95th Percentile Stature (US Male reference).
-- **Accuracy Standard**: Medical-grade anatomical correctness.
+- **Accuracy Standard**: Medical-grade anatomical correctness coupled with high-fidelity organic vector tracing.
     - **Morphology Source**: *Gray's Anatomy* (41st Ed or equivalent) for bone shape and features.
     - **Dimensional Source**: *ANSUR II (2012 Anthropometric Survey of U.S. Army Personnel)* and *NASA-STD-3000 Vol 1*.
-    - All bones must be represented individually.
-    - Proportions must align with specific data points (e.g., Tibiale height, Acromial height) from ANSUR II.
+    - **Vector Style**: **Organic Bezier Curves**. Avoid sharp linear edges (`L`) unless anatomically distinct (like a spine tip). Use cubic (`C`) or quadratic (`Q`) curves to approximate living bone and tissue.
 - **Coordinate System**: Layered SVG with groups (`<g>`) per system.
 - **Z-Index Layering (Bottom to Top)**:
-    1.  Skeletal System (Bones)
-    2.  Organ Systems (Viscera)
-    3.  Nervous & Circulatory Systems (Wiring/Plumbing)
-    4.  Muscular System
-    5.  Integumentary System (Skin)
+    1.  **Esoteric Layers (Base)**: Koshas, Aura (Visual Foundation).
+    2.  **Skeletal System**: Bones.
+    3.  **Organ Systems**: Viscera (Thoracic, Abdominal, Pelvic).
+    4.  **Flow Networks**: Nerves, Arteries, Veins, Lymphatics, Meridians.
+    5.  **Muscular System**: Deep and Superficial muscles.
+    6.  **Integumentary System**: Skin (Top).
+    7.  **Esoteric Overlays**: Chakras, Sephirot (Projected over body).
+
+## Component Architecture
+The project is modularized into `components/` directories to maintain manageability:
+- `components/bones/`: Individual bone files (e.g., `cranium.js`, `pelvis.js`, `vertebral_column.js`).
+- `components/organs/`: Organ system files (e.g., `thoracic.js`, `lower_abdominal.js`).
+- `components/esoteric/`: Energy system files (e.g., `chakras.js`, `sephirot.js`).
 
 ## Validation Protocol
 Before finalizing any component, check against:
 1.  **Shape Validation**: *Gray's Anatomy* / *Netter’s Atlas of Human Anatomy*.
 2.  **Dimensional Validation**: *ANSUR II* 95th Percentile Male data column.
-    - Example Check: *Acromial Height (Standing)* should be approx. 154cm for a 183cm subject.
-3.  **Relative Positioning**: Verify articulation points (e.g., humerus head in glenoid cavity).
+3.  **Relative Positioning**: Verify articulation points (e.g., Femur head in Acetabulum, Humerus head in Glenoid Fossa).
+4.  **Code Integrity**: Ensure no inline comments exist within SVG `d` (path data) attributes, as this breaks rendering.
+
+---
 
 ## 1. The Skeletal System (206 Bones)
 **Group ID**: `skeletal-system`
-**Layer**: 1 (Bottom)
+**Location**: `components/bones/`
 
-### The Axial Skeleton (80 bones)
-*   **Skull** (22)
-    *   *Cranial (8)*: Frontal, Parietal (x2), Temporal (x2), Occipital, Sphenoid, Ethmoid.
-    *   *Facial (14)*: Maxilla (x2), Zygomatic (x2), Mandible, Nasal (x2), Palatine (x2), Inferior nasal concha (x2), Lacrimal (x2), Vomer.
-*   **Auditory Ossicles** (6): Malleus (x2), Incus (x2), Stapes (x2).
-*   **Hyoid Bone** (1)
-*   **Vertebral Column** (26 - verify distinct curvature):
-    *   *Cervical (7)*: Atlas (C1), Axis (C2), C3-C7.
-    *   *Thoracic (12)*: T1-T12 (Generic shape differences between upper/lower).
-    *   *Lumbar (5)*: L1-L5 (Larger bodies).
-    *   *Sacrum (1)*: 5 fused vertebrae.
-    *   *Coccyx (1)*: 4 fused vertebrae.
-*   **Thoracic Cage** (25):
-    *   *Sternum*: Manubrium, Body, Xiphoid Process.
-    *   *Ribs (24)*: True Ribs (1-7), False Ribs (8-10), Floating Ribs (11-12).
+### The Axial Skeleton
+*   **Skull** (`cranium.js`): Frontal, Parietal, Temporal, Occipital, Sphenoid, Ethmoid, Facial bones (Mandible, Maxilla, etc.).
+*   **Vertebral Column** (`vertebral_column.js`):
+    *   Cervical (C1-C7)
+    *   Thoracic (T1-T12)
+    *   Lumbar (L1-L5)
+    *   Sacrum & Coccyx
+*   **Thoracic Cage** (`thoracic_cage.js`): Sternum and Ribs (1-12).
 
-### The Appendicular Skeleton (126 bones)
-*   **Pectoral Girdles** (4):
-    *   *Clavicle (2)*: S-shaped curve.
-    *   *Scapula (2)*: Precise features (spine, acromion, coracoid process).
-*   **Upper Limbs** (60):
-    *   *Humerus (2)*.
-    *   *Radius (2)* & *Ulna (2)* (Note: Ulna longer, Radius pivots).
-    *   *Carpals (16)*: Scaphoid, Lunate, Triquetrum, Pisiform, Trapezium, Trapezoid, Capitate, Hamate (x2 sides).
-    *   *Metacarpals (10)*: I-V (x2 sides).
-    *   *Phalanges (28)*: Proximal, Middle, Distal (Thumb lacks Middle) (x2 sides).
-*   **Pelvic Girdle** (2):
-    *   *Hip Bones (2)*: Each fused from Ilium, Ischium, Pubis.
-*   **Lower Limbs** (60):
-    *   *Femur (2)*: Longest bone, angled slightly inward.
-    *   *Patella (2)*: Sesamoid bone.
-    *   *Tibia (2)*: Weight bearing.
-    *   *Fibula (2)*: Non-weight bearing, lateral.
-    *   *Tarsals (14)*: Calcaneus, Talus, Navicular, Cuboid, Cuneiforms (Medial, Intermediate, Lateral) (x2 sides).
-    *   *Metatarsals (10)*: I-V (x2 sides).
-    *   *Phalanges (28)*: Proximal, Middle, Distal (Big toe lacks Middle) (x2 sides).
+### The Appendicular Skeleton
+*   **Pectoral Girdle & Upper Limbs** (`upper_appendicular.js`, `hands.js`):
+    *   Clavicle & Scapula.
+    *   Humerus, Radius, Ulna.
+    *   Carpals, Metacarpals, Phalanges.
+*   **Pelvic Girdle** (`pelvis.js`):
+    *   **Os Coxae (Hip Bones)**: Detailed, organic reconstruction of Ilium, Ischium, and Pubis. Mirrored Left/Right.
+*   **Lower Limbs** (`lower_appendicular.js`, `feet.js`):
+    *   Femur, Patella, Tibia, Fibula.
+    *   Tarsals, Metatarsals, Phalanges.
+
+---
 
 ## 2. The Organ Systems (Viscera)
 **Group ID**: `organ-systems`
-**Layer**: 2
-*   **Nervous (Central)**: Brain (Cerebrum, Cerebellum, Brainstem), Spinal Cord.
-*   **Cardiovascular**: Heart, Major Arteries (Aorta, Carotid), Major Veins (Vena Cava, Jugular).
-*   **Respiratory**: Larynx, Trachea, Bronchi, Lungs (Right 3 lobes, Left 2 lobes), Diaphragm.
-*   **Digestive**: Esophagus, Stomach, Liver, Gallbladder, Pancreas, Small Intestine (Duodenum, Jejunum, Ileum), Large Intestine (Cecum, Colon, Rectum), Anus.
-*   **Urinary**: Kidneys, Ureters, Bladder, Urethra.
-*   **Endocrine**: Pituitary, Thyroid, Adrenal glands, Spleen.
-*   **Reproductive**: Male reproductive organs.
+**Location**: `components/organs/`
 
-## 3. The Muscular System
+*   **Nervous (Central)**: Brain (Cerebrum, Cerebellum, Brainstem), Spinal Cord (`nervous.js`).
+*   **Head & Neck**: Tongue, Salivary Glands, Thyroid (`head_neck.js`).
+*   **Thoracic**: Heart (`heart.js`), Lungs, Trachea, Diaphragm (`thoracic.js`).
+*   **Abdominal**: 
+    *   Upper: Liver, Stomach, Pancreas, Spleen (`upper_abdominal.js`).
+    *   Lower: Small & Large Intestines (`lower_abdominal.js`).
+*   **Pelvic/Retroperitoneal**: Kidneys, Bladder (`urinary_endocrine.js`), Reproductive Organs (`reproductive_male.js`, `reproductive_female.js`).
+
+---
+
+## 3. The Esoteric / Energy Systems
+**Group IDs**: `layer-central-axis`, `layer-flow-network`, `layer-archetypal`, `layer-koshas`
+**Location**: `components/esoteric/`
+
+These systems represents the subtle body anatomy, integrating Eastern and Western metaphysical traditions.
+
+*   **Chakras** (`chakras.js`): The 7 major energy centers along the central axis (Muladhara to Sahasrara).
+*   **Koshas** (`koshas.js`): The 5 sheaths of existence (Annamaya to Anandamaya), visualized as nested aura layers.
+*   **Sephirot** (`sephirot.js`): The Tree of Life nodes from Kabbalistic tradition.
+*   **Nadis & Meridians**: Energy channels (Ida, Pingala, Sushumna) and TCM meridians.
+*   **Marmas**: Vital energy points from Ayurveda.
+*   **Dantians**: Energy reservoirs from Taoist alchemy.
+
+---
+
+## 4. The "Wiring" (Flow Networks)
+*   **Nervous (Peripheral)**: Brachial plexus, Sciatic nerve.
+*   **Circulatory**: Major Arteries and Veins.
+*   **Lymphatic**: Nodes and Vessels.
+
+---
+
+## 5. The Muscular System
 **Group ID**: `muscular-system`
-**Layer**: 4 (Note: Above Wiring/Plumbing usually, but context dependent for deep vs superficial)
-*   **Head/Neck**: Sternocleidomastoid, Masseter, Trapezius.
-*   **Torso**: Pectoralis Major, Latissimus Dorsi, Rectus Abdominis, Obliques, Erector Spinae.
-*   **Arms**: Deltoid, Biceps Brachii, Triceps Brachii, Brachioradialis, Forearm flexors/extensors.
-*   **Legs**: Gluteus Maximus, Quadriceps (4), Hamstrings (3), Gastrocnemius, Soleus, Tibialis Anterior.
+*   Current focus is on major superficial muscle groups (Pectoralis, Deltoid, Rectus Abdominis, Quadriceps, etc.).
 
-## 4. The "Wiring" and "Plumbing"
-**Group ID**: `wiring-plumbing`
-**Layer**: 3
-*   **Nervous (Peripheral)**: Brachial plexus, Sciatic nerve, Vagus nerve, Femoral nerve.
-*   **Circulatory**: Capillaries and smaller vessels.
-*   **Lymphatic**: Lymph nodes (neck, armpits, groin) and Lymphatic vessels.
-
-## 5. The Integumentary System (The Shell)
-**Group ID**: `integumentary-system`
-**Layer**: 5 (Top)
-*   **Skin**: Epidermis and Dermis layers.
-*   **Fascia**: Connective tissue.
-*   **Appendages**: Hair and Nails.
+---
 
 ## Technical Implementation Notes
-*   **Naming**: `id="bone_[name]_[side]_[index]"` (e.g., `bone_rib_left_07`, `bone_phalanx_distal_thumb_right`).
-*   **Styling**: Use classes for bone types (`.bone-long`, `.bone-flat`) and system regions.
-*   **Interactivity**: Each part must be pixel-perfectly clickable.
-*   **Data Attributes**: Add `data-medical-name` for full anatomical accuracy in tooltips.
+*   **Naming**: `id="bone_[name]_[side]"` (e.g., `bone_femur_left`).
+*   **Data Attributes**:
+    *   `data-name`: Common name (e.g., "Left Femur").
+    *   `data-medical-name`: Latin/Scientific name (e.g., "Femur Sinister").
+    *   `data-desc`: Short description or lore for tooltips.
+    *   `data-bone-id`: Grouping ID for statistics (e.g., parts of the same bone).
+*   **Styling**:
+    *   Base class: `.bone`, `.organ`, `.chakra`, etc.
+    *   Hover effects handled via CSS/JS.
+*   **Interactivity**:
+    *   `mouseover`: Displays info in the `part-name` panel.
+    *   Toggles: Control visibility of entire systems independently.

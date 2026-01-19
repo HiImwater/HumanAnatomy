@@ -99,7 +99,7 @@ const muladhara = `
     <path class="chakra" id="chakra_root" data-name="Root Chakra" data-medical-name="Muladhara"
         data-desc="Location: Perineum • Element: Earth • Focus: Survival, Grounding"
         d="${getRosePath(0, 980, 50, 2, Math.PI / 4)}" 
-        fill="url(#grad-root)" stroke="#ff0000" stroke-width="1" style="opacity: 0.9; mix-blend-mode: screen;"
+        fill="url(#grad-root)" stroke="#ff0000" stroke-width="2" style="opacity: 1.0;"
         filter="url(#glow-root)" />
     <!-- Center Point -->
     <circle cx="0" cy="980" r="4" fill="#ff0000" class="chakra-node" />
@@ -110,15 +110,15 @@ const muladhara = `
 // Need 6? Stack two k=3 rosettes, rotated 60 deg (PI/3).
 const svadhishthana = `
     <!-- SVADHISHSTHANA (Sacral) - Orange - 6 Petals -->
-    <g class="chakra" id="chakra_sacral" style="opacity: 0.9; mix-blend-mode: screen;" 
+    <g class="chakra" id="chakra_sacral" style="opacity: 1.0;" 
         data-name="Sacral Chakra" data-medical-name="Svadhishthana"
         data-desc="Location: Pelvis • Element: Water • Focus: Creativity, Emotion">
         <!-- Pass 1 -->
         <path d="${getRosePath(0, 880, 45, 3, 0)}" 
-            fill="url(#grad-sacral)" stroke="#ff7f00" stroke-width="0.8" />
+            fill="url(#grad-sacral)" stroke="#ff7f00" stroke-width="1.6" />
         <!-- Pass 2 (Rotated 60deg) -->
         <path d="${getRosePath(0, 880, 45, 3, Math.PI / 3)}" 
-            fill="url(#grad-sacral)" stroke="#ff7f00" stroke-width="0.8" />
+            fill="url(#grad-sacral)" stroke="#ff7f00" stroke-width="1.6" />
     </g>
     <circle cx="0" cy="880" r="4" fill="#ff7f00" class="chakra-node" />
 `;
@@ -128,13 +128,13 @@ const svadhishthana = `
 // Need 10? Stack two k=5 rosettes, rotated 36 deg (PI/5).
 const manipura = `
     <!-- MANIPURA (Solar Plexus) - Yellow - 10 Petals -->
-    <g class="chakra" id="chakra_solar" style="opacity: 0.9; mix-blend-mode: screen;" 
+    <g class="chakra" id="chakra_solar" style="opacity: 1.0;" 
         data-name="Solar Plexus Chakra" data-medical-name="Manipura"
         data-desc="Location: Solar Plexus • Element: Fire • Focus: Willpower, Transformation">
         <path d="${getRosePath(0, 660, 40, 5, 0)}" 
-            fill="url(#grad-solar)" stroke="#ffff00" stroke-width="0.8" />
+            fill="url(#grad-solar)" stroke="#ffff00" stroke-width="1.6" />
         <path d="${getRosePath(0, 660, 40, 5, Math.PI / 5)}" 
-            fill="url(#grad-solar)" stroke="#ffff00" stroke-width="0.8" />
+            fill="url(#grad-solar)" stroke="#ffff00" stroke-width="1.6" />
     </g>
     <circle cx="0" cy="660" r="4" fill="#ffff00" class="chakra-node" />
 `;
@@ -152,10 +152,10 @@ const anahata = `
         <path class="chakra" id="chakra_heart" data-name="Heart Chakra" data-medical-name="Anahata" 
             data-desc="Location: Chest • Element: Air • Focus: Love, Compassion" 
             d="${getRosePath(0, 480, 55, 6, 0)}" 
-            fill="url(#grad-heart)" stroke="#00ff00" stroke-width="0.6" style="opacity: 0.9; mix-blend-mode: screen;" />
+            fill="url(#grad-heart)" stroke="#00ff00" stroke-width="1.2" style="opacity: 1.0;" />
         <!-- Hexagram Geometry Insert (Star of David) -->
         <path d="M 0 450 L 26 495 L -26 495 Z M 0 510 L -26 465 L 26 465 Z" 
-            stroke="#ccffcc" fill="none" class="chakra-geometry" stroke-width="0.5" transform="translate(0, 480)" />
+            stroke="#ccffcc" fill="none" class="chakra-geometry" stroke-width="1" transform="translate(0, 480)" />
         <circle cx="0" cy="480" r="4" fill="#00ff00" class="chakra-node" />
     </g>
 `;
@@ -167,7 +167,7 @@ const vishuddha = `
     <path class="chakra" id="chakra_throat" data-name="Throat Chakra" data-medical-name="Vishuddha" 
         data-desc="Location: Throat • Element: Ether/Sound • Focus: Communication, Truth" 
         d="${getRosePath(0, 260, 35, 8, 0)}" 
-        fill="url(#grad-throat)" stroke="#0000ff" stroke-width="0.5" style="opacity: 0.9; mix-blend-mode: screen;" />
+        fill="url(#grad-throat)" stroke="#0000ff" stroke-width="1" style="opacity: 1.0;" />
     <circle cx="0" cy="260" r="3" fill="#0000ff" class="chakra-node" />
 `;
 
@@ -176,11 +176,11 @@ const vishuddha = `
 // Lemniscate is perfect (Infinity symbol).
 const ajna = `
     <!-- AJNA (Third Eye) - Indigo - 2 Petals -->
-    <g class="chakra" id="chakra_third_eye" style="opacity: 0.9; mix-blend-mode: screen;" 
+    <g class="chakra" id="chakra_third_eye" style="opacity: 1.0;" 
         data-name="Third Eye Chakra" data-medical-name="Ajna"
         data-desc="Location: Brow • Element: Light • Focus: Intuition, Perception">
        <path d="${getLemniscatePath(0, 80, 50)}" 
-           fill="url(#grad-ajna)" stroke="#4b0082" stroke-width="1" />
+           fill="url(#grad-ajna)" stroke="#4b0082" stroke-width="2" />
        <!-- Central Node -->
        <circle cx="0" cy="80" r="5" fill="#4b0082" stroke="#fff" stroke-width="0.5"/>
     </g>
@@ -191,18 +191,18 @@ const ajna = `
 // We'll use multiple Rose curves with very high k (e.g. 50, 40, 30)
 const sahasrara = `
     <!-- SAHASRARA (Crown) - Violet/White -->
-    <g class="chakra" id="chakra_crown" style="opacity: 0.8; mix-blend-mode: screen;" 
+    <g class="chakra" id="chakra_crown" style="opacity: 1.0;" 
         data-name="Crown Chakra" data-medical-name="Sahasrara"
         data-desc="Location: Crown • Element: Thought • Focus: Unity, Consciousness">
        <!-- Outer Ring -->
        <path d="${getRosePath(0, -60, 90, 40, 0, 720)}" 
-           fill="none" stroke="#e0b0ff" stroke-width="0.3" opacity="0.5" />
+           fill="none" stroke="#e0b0ff" stroke-width="0.6" opacity="0.8" />
        <!-- Middle Ring -->
        <path d="${getRosePath(0, -60, 70, 30, 0, 720)}" 
-           fill="none" stroke="#d8bfd8" stroke-width="0.4" opacity="0.6" />
+           fill="none" stroke="#d8bfd8" stroke-width="0.8" opacity="0.9" />
        <!-- Inner Ring -->
        <path d="${getRosePath(0, -60, 50, 20, 0, 720)}" 
-           fill="url(#grad-crown)" stroke="#fff" stroke-width="0.5" opacity="0.8" />
+           fill="url(#grad-crown)" stroke="#fff" stroke-width="1" opacity="1.0" />
        <!-- Core -->
        <circle cx="0" cy="-60" r="10" fill="#fff" />
     </g>
@@ -257,7 +257,7 @@ const defs = `
         </filter>
         <!-- (Using standard SVG stroke/fill opacity is usually enough for performance, avoiding too many filters) -->
         <filter id="chakra-shadow" x="-50%" y="-50%" width="200%" height="200%">
-            <feDropShadow dx="0" dy="5" stdDeviation="3" flood-color="#000" flood-opacity="0.5" />
+            <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity="0.8" />
         </filter>
     </defs>
 `;

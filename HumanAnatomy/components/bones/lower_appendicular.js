@@ -8,80 +8,15 @@ export const lowerAppendicularSVG = `
         - Fibula: Lateral (Calf), tightly articulated.
     -->
     
-    <!-- ═══════════════════════════════════════════════════
-         LEFT PELVIS (Os Coxae Sinister) - Organic Refinement
-         Features: Robust Ilium Body, Organic Curves
-    ═══════════════════════════════════════════════════ -->
-
-    <path id="bone_hip_left" class="bone" data-name="Left Hip Bone" data-medical-name="Os Coxae Sinister" data-bone-id="hip-left"
-        d="M -50 835
-           C -90 825, -140 820, -165 845
-           C -175 855, -175 865, -165 875
-           Q -185 910, -175 935
-           C -160 950, -90 950, -30 965
-           C -15 970, -10 985, -15 995
-           L -20 1010
-           C -30 1030, -70 1045, -95 1025
-           C -110 1010, -125 985, -135 965
-           C -95 920, -65 880, -50 860
-           L -50 835
-           Z
-           M -55 975
-           C -45 985, -45 1000, -55 1010
-           C -75 1015, -90 1005, -92 990
-           C -90 970, -65 965, -55 975 Z" 
-        fill-rule="evenodd" />
-
-    <!-- Left Acetabulum - Lunate Surface (C-shaped) -->
-    <path id="bone_acetabulum_left" class="bone" data-name="Left Acetabulum" data-bone-id="hip-left"
-        d="M -150 955 
-           Q -155 940, -135 935
-           Q -115 935, -110 955
-           Q -108 975, -120 985
-           Q -130 990, -140 980
-           Q -125 970, -120 960
-           Q -120 950, -135 950
-           Q -145 955, -143 970
-           Q -140 980, -150 975
-           Q -160 965, -150 955 Z" 
-        fill="#b0b0b0" stroke="none" />
-
-
-    <!-- ═══════════════════════════════════════════════════
-         RIGHT PELVIS (Os Coxae Dexter) - Mirrored
-    ═══════════════════════════════════════════════════ -->
-
-    <path id="bone_hip_right" class="bone" data-name="Right Hip Bone" data-medical-name="Os Coxae Dexter" data-bone-id="hip-right"
-        d="M 50 835
-           C 90 825, 140 820, 165 845
-           C 175 855, 175 865, 165 875
-           Q 185 910, 175 935
-           C 160 950, 90 950, 30 965
-           C 15 970, 10 985, 15 995
-           L 20 1010
-           C 30 1030, 70 1045, 95 1025
-           C 110 1010, 125 985, 135 965
-           C 95 920, 65 880, 50 860
-           L 50 835
-           Z
-           M 55 975
-           C 45 985, 45 1000, 55 1010
-           C 75 1015, 90 1005, 92 990
-           C 90 970, 65 965, 55 975 Z" 
-        fill-rule="evenodd" />
-
-    <path id="bone_acetabulum_right" class="bone" data-name="Right Acetabulum" data-bone-id="hip-right"
-        d="M 150 955 
-           Q 155 940, 135 935
-           Q 115 935, 110 955
-           Q 108 975, 120 985
-           Q 130 990, 140 980
-           Q 125 970, 120 960
-           Q 120 950, 135 950
-           Q 145 955, 143 970
-           Q 140 980, 150 975
-           Q 160 965, 150 955 Z" 
-        fill="#b0b0b0" stroke="none" />
+    <!-- 
+        LOWER APPENDICULAR: LEGS (Femur, Tibia, Fibula, Patella)
+        Note: Pelvis (Os Coxae) is now in pelvis.js
+        
+        CORRECTIONS:
+        - TIBIOFIBULAR JOINT: Closed the gap. Fibula tucks under Tibia.
+        - Tibia: Medial (Shin).
+        - Fibula: Lateral (Calf), tightly articulated.
+    -->
 
 
     <!-- ═══════════════════════════════════════════════════
@@ -132,59 +67,88 @@ export const lowerAppendicularSVG = `
         Left Leg (Screen Left): Tibia X ~ -85, Fibula X ~ -110 (Touching)
     -->
 
+    <!-- 
+        LOWER LEG (Tibia & Fibula Articulated)
+        Reference: Medical Artist - Frontal View
+        Left Leg (Screen Left): Medial Tibia / Lateral Fibula
+    -->
+
     <!-- Left Tibia (Medial) -->
-    <!-- Widened Head to -105 to accept Fibula -->
+    <!-- Broad Condyles, Tibial Tuberosity, Triangular Shaft, Medial Malleolus -->
     <path id="bone_tibia_left" class="bone" data-name="Left Tibia" data-medical-name="Tibia Sinister"
-        d="M -105 1485 
-           C -95 1480, -75 1480, -70 1485 
-           C -65 1490, -60 1500, -65 1510 
-           C -70 1540, -73 1590, -77 1690 
-           C -79 1790, -75 1840, -73 1850 
-           C -70 1865, -80 1875, -90 1870 
-           L -95 1860 
-           C -105 1855, -110 1860, -115 1860 
-           C -120 1840, -118 1760, -118 1660
-           C -120 1560, -120 1510, -115 1500 
-           C -118 1490, -110 1485, -105 1485 Z" />
+        d="M -73 1485                  
+           C -70 1480, -90 1475, -100 1480 
+           C -110 1485, -115 1490, -115 1500 
+           C -120 1515, -115 1525, -105 1535 
+           C -102 1545, -95 1550, -95 1560   
+           C -100 1600, -105 1700, -108 1800 
+           C -110 1840, -110 1850, -108 1855  
+           
+
+           L -105 1860                        
+           Q -95 1855, -88 1860               
+           L -85 1875                         
+           C -82 1878, -78 1875, -78 1870     
+           
+           C -75 1860, -75 1850, -75 1840    
+           C -70 1800, -65 1700, -65 1600    
+           C -65 1540, -60 1520, -55 1500    
+           C -55 1490, -60 1485, -73 1485    
+           Z" />
 
     <!-- Left Fibula (Lateral) -->
-    <!-- Head at -110, tucking into Tibia at -105 -->
+    <!-- Head tucked under Lateral Tibial Condyle. Lateral Malleolus extends lower. -->
     <path id="bone_fibula_left" class="bone" data-name="Left Fibula" data-medical-name="Fibula Sinister"
-        d="M -110 1490 
-           C -105 1490, -100 1495, -103 1505 
-           L -107 1520 
-           C -110 1590, -115 1690, -120 1790 
-           L -123 1850 
-           C -125 1865, -135 1875, -140 1870 
-           C -145 1865, -143 1850, -143 1840 
-           C -145 1760, -140 1660, -135 1560 
-           L -120 1520 
-           C -123 1500, -120 1490, -110 1490 Z" />
+        d="M -118 1505                 
+           C -125 1505, -130 1515, -130 1525
+           C -130 1540, -128 1650, -125 1750 
+           C -123 1800, -123 1840, -125 1850 
+           
+
+           L -125 1870
+           Q -122 1880, -120 1890             
+           C -115 1895, -110 1890, -112 1880  
+           Q -115 1870, -112 1860             
+           
+           C -110 1800, -112 1700, -115 1600 
+           C -118 1540, -118 1520, -118 1505 
+           Z" />
 
     <!-- Right Tibia (Medial) -->
+    <!-- Mirror of Left -->
     <path id="bone_tibia_right" class="bone" data-name="Right Tibia" data-medical-name="Tibia Dexter"
-        d="M 105 1485 
-           C 95 1480, 75 1480, 70 1485 
-           C 65 1490, 60 1500, 65 1510 
-           C 70 1540, 73 1590, 77 1690 
-           C 79 1790, 75 1840, 73 1850 
-           C 70 1865, 80 1875, 90 1870 
-           L 95 1860 
-           C 105 1855, 110 1860, 115 1860 
-           C 120 1840, 118 1760, 118 1660 
-           C 120 1560, 120 1510, 115 1500 
-           C 118 1490, 110 1485, 105 1485 Z" />
+        d="M 73 1485                   
+           C 70 1480, 90 1475, 100 1480
+           C 110 1485, 115 1490, 115 1500
+           C 120 1515, 115 1525, 105 1535 
+           C 102 1545, 95 1550, 95 1560   
+           C 100 1600, 105 1700, 108 1800 
+           C 110 1840, 110 1850, 108 1855  
+           
+           L 105 1860                        
+           Q 95 1855, 88 1860               
+           L 85 1875                         
+           C 82 1878, 78 1875, 78 1870     
+           
+           C 75 1860, 75 1850, 75 1840    
+           C 70 1800, 65 1700, 65 1600    
+           C 65 1540, 60 1520, 55 1500    
+           C 55 1490, 60 1485, 73 1485    
+           Z" />
 
     <!-- Right Fibula (Lateral) -->
     <path id="bone_fibula_right" class="bone" data-name="Right Fibula" data-medical-name="Fibula Dexter"
-        d="M 110 1490 
-           C 105 1490, 100 1495, 103 1505 
-           L 107 1520 
-           C 110 1590, 115 1690, 120 1790 
-           L 123 1850 
-           C 125 1865, 135 1875, 140 1870 
-           C 145 1865, 143 1850, 143 1840 
-           C 145 1760, 140 1660, 135 1560 
-           L 120 1520 
-           C 123 1500, 120 1490, 110 1490 Z" />
+        d="M 118 1505                  
+           C 125 1505, 130 1515, 130 1525
+           C 130 1540, 128 1650, 125 1750 
+           C 123 1800, 123 1840, 125 1850 
+           
+           L 125 1870
+           Q 122 1880, 120 1890             
+           C 115 1895, 110 1890, 112 1880  
+           Q 115 1870, 112 1860             
+           
+           C 110 1800, 112 1700, 115 1600 
+           C 118 1540, 118 1520, 118 1505 
+           Z" />
 `;

@@ -8,19 +8,14 @@ export const koshasSVG = `
     <!-- Pranamaya (Energy) - Yellow (Water) -->
     <filter id="kosha-pranamaya">
         <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur"/>
-        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence">
-            <animate attributeName="baseFrequency" values="0.01;0.012;0.01" dur="12s" repeatCount="indefinite"/>
-        </feTurbulence>
+        <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="turbulence"/>
         <feDisplacementMap in="blur" in2="turbulence" scale="10" xChannelSelector="R" yChannelSelector="G"/>
-        <!-- Preserve Yellow Color -->
     </filter>
 
     <!-- Manomaya (Mental) - Green (Fire) -->
     <filter id="kosha-manomaya">
         <feGaussianBlur in="SourceGraphic" stdDeviation="15" result="blur"/>
-        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="turb">
-             <animate attributeName="seed" values="1;100;1" dur="30s" repeatCount="indefinite"/>
-        </feTurbulence>
+        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" result="turb"/>
         <feDisplacementMap in="blur" in2="turb" scale="20"/>
     </filter>
 
@@ -32,9 +27,7 @@ export const koshasSVG = `
     <!-- Anandamaya (Bliss) - White/Gold -->
     <filter id="kosha-anandamaya">
         <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur"/>
-        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="4" seed="0">
-            <animate attributeName="seed" values="0;100" dur="60s" repeatCount="indefinite"/>
-        </feTurbulence>
+        <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="4" seed="0"/>
         <feComposite operator="in" in2="blur"/>
         <feDropShadow dx="0" dy="0" stdDeviation="20" flood-color="#FFD700" flood-opacity="0.5"/>
     </filter>
@@ -104,18 +97,28 @@ export const koshasSVG = `
 </defs>
 
 <g class="koshas-layer">
-    <use href="#body-silhouette" class="kosha" data-name="Anandamaya Kosha" data-medical-name="Bliss Sheath" data-desc="The causal body. Pure bliss and spiritual connection." fill="#FFFFFF" stroke="none" transform="scale(2.0) translate(0, -250)" filter="url(#kosha-anandamaya)" opacity="0.6" />
+    <g transform="scale(2.0) translate(0, -250)">
+        <use href="#body-silhouette" class="kosha kosha-anandamaya" data-name="Anandamaya Kosha" data-medical-name="Bliss Sheath" data-desc="The causal body. Pure bliss and spiritual connection." fill="#FFFFFF" stroke="none" filter="url(#kosha-anandamaya)" opacity="0.6" />
+    </g>
 
     <!-- 4. Vijnanamaya (Wisdom) - Blue (Air) -->
-    <use href="#body-silhouette" class="kosha" data-name="Vijnanamaya Kosha" data-medical-name="Intellect Sheath" data-desc="The convex of wisdom. Intuition and higher intellect." fill="#1E90FF" stroke="none" transform="scale(1.7) translate(0, -180)" filter="url(#kosha-vijnanamaya)" opacity="0.4" />
+    <g transform="scale(1.7) translate(0, -180)">
+        <use href="#body-silhouette" class="kosha kosha-vijnanamaya" data-name="Vijnanamaya Kosha" data-medical-name="Intellect Sheath" data-desc="The convex of wisdom. Intuition and higher intellect." fill="#1E90FF" stroke="none" filter="url(#kosha-vijnanamaya)" opacity="0.4" />
+    </g>
 
     <!-- 3. Manomaya (Mental) - Green (Fire) -->
-    <use href="#body-silhouette" class="kosha" data-name="Manomaya Kosha" data-medical-name="Mental Sheath" data-desc="The mental body. Thoughts, emotions, and sensory perception." fill="#32CD32" stroke="none" transform="scale(1.4) translate(0, -100)" filter="url(#kosha-manomaya)" opacity="0.4" />
+    <g transform="scale(1.4) translate(0, -100)">
+        <use href="#body-silhouette" class="kosha kosha-manomaya" data-name="Manomaya Kosha" data-medical-name="Mental Sheath" data-desc="The mental body. Thoughts, emotions, and sensory perception." fill="#32CD32" stroke="none" filter="url(#kosha-manomaya)" opacity="0.4" />
+    </g>
 
     <!-- 2. Pranamaya (Energy) - Yellow (Water) -->
-    <use href="#body-silhouette" class="kosha" data-name="Pranamaya Kosha" data-medical-name="Vital Energy Sheath" data-desc="The energy body. Prana (life force) and breath." fill="#FFD700" stroke="none" transform="scale(1.15) translate(0, -40)" filter="url(#kosha-pranamaya)" opacity="0.5" />
+    <g transform="scale(1.15) translate(0, -40)">
+        <use href="#body-silhouette" class="kosha kosha-pranamaya" data-name="Pranamaya Kosha" data-medical-name="Vital Energy Sheath" data-desc="The energy body. Prana (life force) and breath." fill="#FFD700" stroke="none" filter="url(#kosha-pranamaya)" opacity="0.5" />
+    </g>
 
     <!-- 1. Annamaya (Physical) - Red (Earth) -->
-    <use href="#body-silhouette" class="kosha" data-name="Annamaya Kosha" data-medical-name="Physical Sheath" data-desc="The gross physical body. Made of food (Anna)." fill="none" stroke="#FF0000" stroke-width="3" filter="url(#kosha-annamaya)" opacity="0.8" />
+    <g>
+        <use href="#body-silhouette" class="kosha kosha-annamaya" data-name="Annamaya Kosha" data-medical-name="Physical Sheath" data-desc="The gross physical body. Made of food (Anna)." fill="none" stroke="#FF0000" stroke-width="3" filter="url(#kosha-annamaya)" opacity="0.8" />
+    </g>
 </g>
 `;
