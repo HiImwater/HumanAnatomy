@@ -316,4 +316,15 @@ export const thoracicCageSVG = `
            L -12 570
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
+
+    <!-- Shadows for Thoracic Cage Interior -->
+    <g id="thoracic_shadows">
+        <!-- Deep interior shadow behind sternum/ribs to show cavity depth -->
+        <path class="bone-shadow" d="M -80 350 L -120 400 L -140 500 L -120 600 L -80 620 L -30 620 L -30 350 Z" opacity="0.1" />
+        <path class="bone-shadow" d="M 80 350 L 120 400 L 140 500 L 120 600 L 80 620 L 30 620 L 30 350 Z" opacity="0.1" />
+        
+        <!-- Costochondral Junction Shadows (Under sternum edge) -->
+        <path class="bone-shadow" d="M -30 380 L -35 550 L -25 550 L -20 380 Z" />
+        <path class="bone-shadow" d="M 30 380 L 35 550 L 25 550 L 20 380 Z" />
+    </g>
 `;

@@ -79,4 +79,18 @@ export const pelvisSVG = `
            C 105 970, 110 950, 120 943
            Q 125 940, 130 940 Z"
         fill="#b0b0b0" stroke="none" opacity="0.6" />
+
+    <!-- Shadows for Pelvis Depth -->
+    <g id="pelvis_shadows">
+        <!-- Iliac Fossa Shadows (Deep bowl shape) -->
+        <path class="bone-shadow" d="M -50 850 Q -100 850 -130 870 L -120 950 Q -80 950 -50 900 Z" />
+        <path class="bone-shadow" d="M 50 850 Q 100 850 130 870 L 120 950 Q 80 950 50 900 Z" />
+
+        <!-- Pubic Symphysis Shadow (Midline depth) -->
+        <path class="bone-shadow" d="M -2 1005 L -2 1020 L 2 1020 L 2 1005 Z" opacity="0.3" />
+        
+        <!-- Sacroiliac Joint Shadows (Posterior depth) -->
+        <path class="bone-shadow" d="M -40 840 L -30 900 L -50 900 Z" opacity="0.2" />
+        <path class="bone-shadow" d="M 40 840 L 30 900 L 50 900 Z" opacity="0.2" />
+    </g>
 `;

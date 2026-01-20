@@ -197,4 +197,19 @@ export const vertebralColumnSVG = `
            M -4 984 Q 0 986, 4 984 L 3 990 Q 0 992, -3 990 Z
            M -2 992 Q 0 993, 2 992 L 0 998 L -2 992 Z" 
         fill="#d0d0d0" />
+
+    <!-- Shadows for Depth (Kyphosis & Lordosis) -->
+    <g id="spine_shadows">
+        <!-- Thoracic Kyphosis Shadow (Pushing mid-spine back) -->
+        <path class="bone-shadow" d="M -20 350 L -20 620 Q 0 630 20 620 L 20 350 Q 0 340 -20 350 Z" opacity="0.1" />
+        
+        <!-- Cervical Depth (Under chin) -->
+        <path class="bone-shadow" d="M -15 200 L -15 240 Q 0 250 15 240 L 15 200 Z" />
+
+        <!-- Intervertebral Disc Shadows (Sampled for depth) -->
+        <path class="bone-shadow" d="M -25 675 Q 0 685 25 675 L 25 683 Q 0 693 -25 683 Z" /> <!-- L1-L2 -->
+        <path class="bone-shadow" d="M -26 718 Q 0 728 26 718 L 26 726 Q 0 736 -26 726 Z" /> <!-- L2-L3 -->
+        <path class="bone-shadow" d="M -27 761 Q 0 771 27 761 L 27 769 Q 0 779 -27 769 Z" /> <!-- L3-L4 -->
+        <path class="bone-shadow" d="M -28 804 Q 0 814 28 804 L 28 812 Q 0 822 -28 812 Z" /> <!-- L4-L5 -->
+    </g>
 `;

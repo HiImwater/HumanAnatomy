@@ -16,6 +16,7 @@
             <legend>Physical Layers</legend>
             <label><input type="checkbox" id="toggle-skeleton" checked> Skeletal System</label>
             <label><input type="checkbox" id="toggle-ligaments"> Ligaments</label>
+            <label><input type="checkbox" id="toggle-cartilage"> Cartilage</label>
             <label><input type="checkbox" id="toggle-tendons"> Tendons</label>
             <label><input type="checkbox" id="toggle-organs" checked> Organ Systems</label>
             <div id="reproductive-controls" style="margin-left: 10px; display: none;">
@@ -27,8 +28,13 @@
             </div>
             <label><input type="checkbox" id="toggle-circulatory"> Arteries & Veins</label>
             <label><input type="checkbox" id="toggle-lymphatic"> Lymphatic System</label>
-            <label><input type="checkbox" id="toggle-integumentary"> Integumentary (Skin/Hair)</label>
+            <label><input type="checkbox" id="toggle-integumentary"> Integumentary (Skin)</label>
+            <label style="margin-left: 20px;"><input type="checkbox" id="toggle-skin-derivative"> Derivative Skin
+                (Experimental)</label>
+            <label><input type="checkbox" id="toggle-hair"> Hair</label>
             <label><input type="checkbox" id="toggle-muscle"> Muscular System</label>
+            <label><input type="checkbox" id="toggle-fascia"> Fascia (Connective Tissue)</label>
+            <label><input type="checkbox" id="toggle-fat"> Adipose Tissue (Fat)</label>
         </fieldset>
 
         <!-- Esoteric Layers (Collapsible) -->
@@ -75,6 +81,12 @@
                     <label><input type="checkbox" id="toggle-islamic-latifas"> Islamic Latifas (Amr & Khalq)</label>
                 </div>
             </details>
+            <details class="sub-layer">
+                <summary>Palmistry / Chiromancy</summary>
+                <div class="sub-layer-content">
+                    <label><input type="checkbox" id="toggle-palmistry"> Palm Map (Lines & Mounts)</label>
+                </div>
+            </details>
         </details>
         <div id="stats-panel">
             <h3>Rendering Stats</h3>
@@ -103,6 +115,10 @@
                 <span id="stat-ligaments" class="stat-value">0</span>
             </div>
             <div class="stat-row">
+                <span class="stat-label">Cartilage:</span>
+                <span id="stat-cartilage" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
                 <span class="stat-label">Tendons:</span>
                 <span id="stat-tendons" class="stat-value">0</span>
             </div>
@@ -113,6 +129,18 @@
             <div class="stat-row">
                 <span class="stat-label">Nodes:</span>
                 <span id="stat-nodes" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Fascia:</span>
+                <span id="stat-fascia" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Fat Pads:</span>
+                <span id="stat-fat" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Hair:</span>
+                <span id="stat-hair" class="stat-value">0</span>
             </div>
             <!-- Energy Body Stats -->
             <div class="stat-row">
@@ -146,6 +174,14 @@
             <div class="stat-row">
                 <span class="stat-label">Circuits:</span>
                 <span id="stat-circuits" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Palm Lines:</span>
+                <span id="stat-palm-lines" class="stat-value">0</span>
+            </div>
+            <div class="stat-row">
+                <span class="stat-label">Mounts:</span>
+                <span id="stat-palm-mounts" class="stat-value">0</span>
             </div>
         </div>
         <div id="info-panel">
@@ -250,6 +286,9 @@
             <g id="ligament-system" style="display: none;">
                 <!-- Ligaments -->
             </g>
+            <g id="layer-cartilage" style="display: none;">
+                <g id="group-cartilage"></g>
+            </g>
             <g id="tendon-system" style="display: none;">
                 <g id="group-tendons"><!-- Tendons injected here --></g>
             </g>
@@ -265,8 +304,20 @@
             <g id="muscular-system" style="display: none;">
                 <!-- Muscles -->
             </g>
+            <g id="layer-fascia" style="display: none;">
+                <g id="group-fascia"></g>
+            </g>
+            <g id="layer-fat" style="display: none;">
+                <g id="group-fat"></g>
+            </g>
             <g id="integumentary-system" style="display: none;">
-                <!-- Skin, Hair, Nails -->
+                <!-- Skin -->
+            </g>
+            <g id="layer-skin-derivative" style="display: none;">
+                <!-- Derivative Skin Layer (Independent) -->
+            </g>
+            <g id="layer-hair" style="display: none;">
+                <!-- Hair -->
             </g>
             <g id="layer-flow-network" style="display: none;">
                 <g id="group-meridians"></g>
@@ -282,7 +333,7 @@
                 <!-- Egyptian Overlay - Order: back to front -->
                 <g id="group-egyptian-sah"></g>
                 <g id="group-egyptian-ka"></g>
-                <g id="group-egyptian-ba"></g>
+                <!-- Ba moved to Topmost Layer -->
                 <g id="group-egyptian-ib"></g>
                 <g id="group-egyptian-sekhem"></g>
                 <g id="group-egyptian-akh"></g><!-- TOPMOST -->
@@ -312,6 +363,17 @@
                 <!-- Alam-i Amr (Points) -->
                 <g id="group-latifas-amr"></g>
                 <g id="group-latifas-khalq-nafs"></g>
+            </g>
+
+            <!-- Palmistry Layer - MOVED TO TOPMOST (Exoteric/Esoteric Map) -->
+            <g id="layer-palmistry" style="display: none;">
+                <defs id="palmistry-defs"></defs>
+                <g id="group-palmistry"></g>
+            </g>
+
+            <!-- Ba (Soul Bird) - ABSOLUTE TOPMOST for Splendor -->
+            <g id="layer-ba-top" style="display: none;">
+                <g id="group-egyptian-ba-top"></g>
             </g>
         </svg>
     </div>

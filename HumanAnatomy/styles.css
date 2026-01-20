@@ -44,6 +44,13 @@ svg {
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
 }
 
+.bone-shadow {
+    fill: #000000;
+    opacity: 0.2;
+    pointer-events: none;
+    mix-blend-mode: multiply;
+}
+
 /* --- Layer Group Styling --- */
 
 fieldset.layer-group.physical {
@@ -267,7 +274,8 @@ details.sub-layer>summary {
 
 .muscle-deep:hover,
 .muscle-superficial:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.3) drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+    stroke: #ffbbbb;
     cursor: pointer;
 }
 

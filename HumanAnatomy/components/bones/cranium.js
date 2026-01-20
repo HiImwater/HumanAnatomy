@@ -18,6 +18,10 @@ export const craniumSVG = `
            C -76 95, -78 85, -75 70
            C -60 30, -25 15, 0 15 
            Z" />
+    
+    <!-- Frontal Bone Shadows -->
+    <path class="bone-shadow" d="M 60 40 Q 65 60 70 80 L 75 70 Q 60 30 25 15 L 0 15 L 25 15 Z" />
+    <path class="bone-shadow" d="M -60 40 Q -65 60 -70 80 L -75 70 Q -60 30 -25 15 L 0 15 L -25 15 Z" />
 
     <!-- 
         Parietal Bones (Os parietale)
@@ -30,6 +34,9 @@ export const craniumSVG = `
            C -50 -20, -10 -20, 0 -20
            Z" />
 
+    <!-- Parietal Bone Shadows (Left Suture) -->
+    <path class="bone-shadow" d="M -5 15 L -5 -20 L 0 -20 L 0 15 Z" />
+
     <path id="bone_parietal_right" class="bone" data-name="Right Parietal Bone"
         data-medical-name="Os Parietale Dexter" d="M 0 15
            C 20 15, 50 25, 60 35
@@ -37,6 +44,9 @@ export const craniumSVG = `
            C 85 60, 80 30, 70 10
            C 50 -20, 10 -20, 0 -20
            Z" />
+
+    <!-- Parietal Bone Shadows (Right Suture) -->
+    <path class="bone-shadow" d="M 5 15 L 5 -20 L 0 -20 L 0 15 Z" />
 
     <!-- 
         Occipital Bone (Os Occipitale)
@@ -70,6 +80,9 @@ export const craniumSVG = `
            C -85 115, -89 115, -85 105 
            Z" />
 
+    <!-- Temporal Bone Shadows (Left Fossa) -->
+    <path class="bone-shadow" d="M -80 80 Q -85 90 -88 100 L -82 105 Q -78 90 -82 70 Z" />
+
     <!-- 
         Auditory Ossicles (Left)
         Located within the petrous part of the temporal bone.
@@ -99,6 +112,9 @@ export const craniumSVG = `
            C 85 115, 89 115, 85 105
            Z" />
 
+    <!-- Temporal Bone Shadows (Right Fossa) -->
+    <path class="bone-shadow" d="M 80 80 Q 85 90 88 100 L 82 105 Q 78 90 82 70 Z" />
+
     <!-- 
         Auditory Ossicles (Right)
     -->
@@ -122,6 +138,11 @@ export const craniumSVG = `
            L 40 95
            L 25 90
            Z" />
+
+    <!-- Right Orbit Shadow - Enhanced Depth -->
+    <path class="bone-shadow" d="M 30 85 L 50 82 L 60 90 L 50 95 L 35 92 Z" opacity="0.3" /> <!-- Inner deepest point -->
+    <path class="bone-shadow" d="M 25 90 L 40 95 L 65 90 L 60 75 Z" /> <!-- Existing general shadow -->
+    
     <!-- Left Orbit Part (Greater Wing) -->
     <path id="bone_sphenoid_orbital_left" class="bone" data-bone-id="bone_sphenoid" data-name="Sphenoid (Left Greater Wing)"
         data-medical-name="Os Sphenoidale (Ala major sinister)" d="M -45 80
@@ -130,6 +151,10 @@ export const craniumSVG = `
            L -40 95
            L -25 90
            Z" />
+
+    <!-- Left Orbit Shadow - Enhanced Depth -->
+    <path class="bone-shadow" d="M -30 85 L -50 82 L -60 90 L -50 95 L -35 92 Z" opacity="0.3" /> <!-- Inner deepest point -->
+    <path class="bone-shadow" d="M -25 90 L -40 95 L -65 90 L -60 75 Z" /> <!-- Existing general shadow -->
     <!-- Center Body -->
     <path id="bone_sphenoid_body" class="bone" data-bone-id="bone_sphenoid" data-name="Sphenoid Body"
         data-medical-name="Os Sphenoidale (Corpus)" d="M -10 90
@@ -175,6 +200,9 @@ export const craniumSVG = `
            L 0 135 
            Z" />
 
+    <!-- Left Maxilla Shadow -->
+    <path class="bone-shadow" d="M -30 150 Q -35 140 -45 135 Q -40 125 -30 120 Z" />
+
     <path id="bone_maxilla_right" class="bone" data-name="Right Maxilla"
         data-medical-name="Os Maxilla Dexter" 
         d="M 0 166 
@@ -185,6 +213,9 @@ export const craniumSVG = `
            L 5 128 
            L 0 135 
            Z" />
+
+    <!-- Right Maxilla Shadow -->
+    <path class="bone-shadow" d="M 30 150 Q 35 140 45 135 Q 40 125 30 120 Z" />
 
     <!--
         Teeth (Maxillary) - Upper
@@ -227,6 +258,9 @@ export const craniumSVG = `
            C -95 135, -80 140, -50 135
            Z" />
 
+    <!-- Left Zygomatic Shadow -->
+    <path class="bone-shadow" d="M -50 135 Q -70 140 -95 135 L -90 125 Q -70 130 -50 120 Z" />
+
     <path id="bone_zygomatic_right" class="bone" data-name="Right Zygomatic Bone"
         data-medical-name="Os Zygomaticum Dexter" 
         d="M 42 115
@@ -235,6 +269,9 @@ export const craniumSVG = `
            Q 92 118, 95 120
            C 95 135, 80 140, 50 135
            Z" />
+
+    <!-- Right Zygomatic Shadow -->
+    <path class="bone-shadow" d="M 50 135 Q 70 140 95 135 L 90 125 Q 70 130 50 120 Z" />
 
     <!-- ... (Internal Nasal Bones) ... -->
     <!-- 
@@ -245,6 +282,13 @@ export const craniumSVG = `
           d="M -2 128 L -10 128 L -8 115 L -1 115 Z" />
     <path id="bone_nasal_right" class="bone" data-name="Right Nasal Bone" data-medical-name="Os Nasale Dexter" 
           d="M 2 128 L 10 128 L 8 115 L 1 115 Z" />
+
+    <!-- 
+        Nasal Aperture Shadows (Nostrils)
+        Deep interior of the piriform aperture
+    -->
+    <path class="bone-shadow" d="M -2 130 L -8 135 L -8 145 L -2 140 Z" opacity="0.4" />
+    <path class="bone-shadow" d="M 2 130 L 8 135 L 8 145 L 2 140 Z" opacity="0.4" />
 
     <!-- 
         Vomer
@@ -291,6 +335,9 @@ export const craniumSVG = `
            L -48 135 
            Q -55 130, -60 120
            Z" />
+
+    <!-- Mandible Shadow -->
+    <path class="bone-shadow" d="M -40 168 Q 0 180 40 168 L 30 180 Q 0 190 -30 180 Z" />
 
     <!--
         Teeth (Mandibular) - Lower

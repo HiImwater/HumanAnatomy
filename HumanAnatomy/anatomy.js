@@ -27,7 +27,8 @@ import { headNeckOrgansSVG } from './components/organs/head_neck.js';
 import { digestiveAuxSVG } from './components/organs/digestive_aux.js';
 import { heartSVG } from './components/circulatory/heart.js';
 import { connectiveOrgansSVG } from './components/organs/connective.js';
-import { integumentarySVG } from './components/organs/integumentary.js';
+import { integumentarySVG, derivativeSkinLayerSVG } from './components/organs/integumentary.js';
+import { hairSVG } from './components/integumentary/hair.js';
 import { trunkMusclesSVG } from './components/muscles/trunk.js';
 import { upperLimbsMusclesSVG } from './components/muscles/upper_limbs.js';
 import { lowerLimbsMusclesSVG } from './components/muscles/lower_limbs.js';
@@ -36,6 +37,10 @@ import { handsMusclesSVG } from './components/muscles/hands.js';
 import { feetMusclesSVG } from './components/muscles/feet.js';
 import { upperLimbsTendonsSVG } from './components/tendons/upper_limbs.js';
 import { lowerLimbsTendonsSVG } from './components/tendons/lower_limbs.js';
+import { fatLayersSVG } from './components/fat/fat_layers.js';
+import { fasciaLayersSVG } from './components/fascia/fascia_layers.js';
+import { cartilageLayersSVG } from './components/cartilage/cartilage_layers.js';
+import { palmistrySVG } from './components/esoteric/palmistry_map.js';
 
 // ... (existing updateStats function) ...
 
@@ -85,11 +90,15 @@ function updateStats() {
 
     // Count new layers only if visible
     const isLigamentsVisible = document.getElementById('ligament-system').style.display !== 'none';
+    const isCartilageVisible = document.getElementById('layer-cartilage').style.display !== 'none';
     const isTendonsVisible = document.getElementById('tendon-system').style.display !== 'none';
     const isOrgansVisible = document.getElementById('organ-systems').style.display !== 'none';
-    const isMusclesVisible = document.getElementById('muscular-system').style.display !== 'none';
+    const isMusclesVisible = document.getElementById('muscular-system').style.opacity !== '0';
     const isCirculatoryVisible = document.getElementById('circulatory-system').style.display !== 'none';
     const isLymphaticVisible = document.getElementById('lymphatic-system').style.display !== 'none';
+    const isFatVisible = document.getElementById('layer-fat').style.display !== 'none';
+    const isFasciaVisible = document.getElementById('layer-fascia').style.display !== 'none';
+    const isHairVisible = document.getElementById('layer-hair').style.display !== 'none';
 
     // ...
 
@@ -105,6 +114,7 @@ function updateStats() {
     const isSephirotVisible = document.getElementById('group-sephirot').style.display !== 'none';
 
     let ligamentCount = 0;
+    let cartilageCount = 0;
     let tendonCount = 0;
     let visibleOrganCount = 0;
     let vesselCount = 0;
@@ -113,9 +123,22 @@ function updateStats() {
     let marmaCount = 0;
     let sephirotCount = 0;
     let meridianCount = 0;
+    let hairCount = 0;
 
     if (isLigamentsVisible) {
         ligamentCount = svg.querySelectorAll('.ligament').length;
+    }
+    if (isCartilageVisible) {
+        // Count paths inside cartilage groups
+        const cartilageGroups = svg.querySelectorAll('.cartilage');
+        cartilageGroups.forEach(g => {
+            // Check if 'g' is an element that supports querySelectorAll (it should be)
+            if (g.querySelectorAll) {
+                cartilageCount += g.querySelectorAll('path, rect, circle, ellipse').length;
+            }
+        });
+        // Also count individual cartilage elements if they are not groups
+        cartilageCount += svg.querySelectorAll('path.cartilage, rect.cartilage, circle.cartilage').length;
     }
     if (isTendonsVisible) {
         tendonCount = svg.querySelectorAll('.tendon').length;
@@ -129,6 +152,14 @@ function updateStats() {
     if (isLymphaticVisible) {
         nodeCount = svg.querySelectorAll('.node').length;
     }
+
+    let fatCount = 0;
+    if (isFatVisible) fatCount = svg.querySelectorAll('.fat-pad').length;
+
+    let fasciaCount = 0;
+    if (isFasciaVisible) fasciaCount = svg.querySelectorAll('.fascia').length;
+
+    if (isHairVisible) hairCount = svg.querySelectorAll('.hair').length;
 
     // Energy Body Counts
     if (isChakrasVisible) chakraCount = svg.querySelectorAll('.chakra').length;
@@ -151,6 +182,14 @@ function updateStats() {
     const isCircuitsVisible = document.getElementById('layer-8circuits').style.display !== 'none';
     if (isCircuitsVisible) circuitCount = svg.querySelectorAll('.circuit').length;
 
+    let palmLineCount = 0;
+    let palmMountCount = 0;
+    const isPalmistryVisible = document.getElementById('layer-palmistry').style.display !== 'none';
+    if (isPalmistryVisible) {
+        palmLineCount = svg.querySelectorAll('.palm-line').length;
+        palmMountCount = svg.querySelectorAll('.palm-mount-group').length;
+    }
+
     // Update stat displays
     document.getElementById('stat-bones').textContent = boneCount;
     document.getElementById('stat-teeth').textContent = toothCount;
@@ -158,9 +197,18 @@ function updateStats() {
     document.getElementById('stat-muscles').textContent = muscleCount;
     document.getElementById('stat-nerves').textContent = nerveCount;
     document.getElementById('stat-ligaments').textContent = ligamentCount;
+    document.getElementById('stat-cartilage').textContent = cartilageCount;
     document.getElementById('stat-tendons').textContent = tendonCount;
     document.getElementById('stat-vessels').textContent = vesselCount;
+    document.getElementById('stat-vessels').textContent = vesselCount;
     document.getElementById('stat-nodes').textContent = nodeCount;
+    const statFat = document.getElementById('stat-fat');
+    const statFascia = document.getElementById('stat-fascia');
+    if (statFat) statFat.textContent = fatCount;
+    if (statFascia) statFascia.textContent = fasciaCount;
+
+    const statHair = document.getElementById('stat-hair');
+    if (statHair) statHair.textContent = hairCount;
 
     // Energy Stats
     const statChakras = document.getElementById('stat-chakras');
@@ -176,6 +224,11 @@ function updateStats() {
     if (statKoshas) statKoshas.textContent = koshaCount;
     if (statEgyptian) statEgyptian.textContent = egyptianCount;
     if (statCircuits) statCircuits.textContent = circuitCount;
+
+    const statPalmLines = document.getElementById('stat-palm-lines');
+    const statPalmMounts = document.getElementById('stat-palm-mounts');
+    if (statPalmLines) statPalmLines.textContent = palmLineCount;
+    if (statPalmMounts) statPalmMounts.textContent = palmMountCount;
 
     const statMeridians = document.getElementById('stat-meridians');
     if (statMeridians) statMeridians.textContent = meridianCount;
@@ -232,9 +285,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Inject Integumentary System
+    // Inject Integumentary (Skin)
     const integumentaryGroup = document.getElementById('integumentary-system');
     if (integumentaryGroup) {
         integumentaryGroup.innerHTML = integumentarySVG;
+    }
+
+    // Inject Hair
+    const hairGroup = document.getElementById('layer-hair');
+    if (hairGroup) {
+        hairGroup.innerHTML = hairSVG;
     }
 
     // Inject Muscular System
@@ -254,7 +314,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const muscleToggle = document.getElementById('toggle-muscle');
     if (muscleToggle && muscleGroup) {
         muscleToggle.addEventListener('change', (e) => {
-            muscleGroup.style.display = e.target.checked ? 'block' : 'none';
+            const isVisible = e.target.checked;
+            muscleGroup.style.opacity = isVisible ? '1' : '0';
+            muscleGroup.style.pointerEvents = isVisible ? 'all' : 'none';
+            // Ensure display is block so <use> refs works even if hidden
+            muscleGroup.style.display = 'block';
             updateStats();
         });
     }
@@ -275,6 +339,19 @@ document.addEventListener('DOMContentLoaded', () => {
         ligamentGroup.style.display = e.target.checked ? 'block' : 'none';
         updateStats();
     });
+
+    // Inject Cartilage Layers
+    const cartilageGroup = document.getElementById('group-cartilage');
+    if (cartilageGroup) cartilageGroup.innerHTML = cartilageLayersSVG;
+
+    const cartilageToggle = document.getElementById('toggle-cartilage');
+    const layerCartilage = document.getElementById('layer-cartilage');
+    if (cartilageToggle && layerCartilage) {
+        cartilageToggle.addEventListener('change', (e) => {
+            layerCartilage.style.display = e.target.checked ? 'block' : 'none';
+            updateStats();
+        });
+    }
 
     // Inject Tendon System
     const tendonGroup = document.getElementById('group-tendons');
@@ -382,6 +459,55 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    const skinDerivativeToggle = document.getElementById('toggle-skin-derivative');
+    const skinDerivativeLayer = document.getElementById('layer-skin-derivative');
+
+    // Inject Derivative Skin Layer
+    if (skinDerivativeLayer) {
+        skinDerivativeLayer.innerHTML = derivativeSkinLayerSVG;
+    }
+
+    if (skinDerivativeToggle && skinDerivativeLayer) {
+        skinDerivativeToggle.addEventListener('change', (e) => {
+            skinDerivativeLayer.style.display = e.target.checked ? 'block' : 'none';
+        });
+    }
+
+    const hairToggle = document.getElementById('toggle-hair');
+    const hairGroupContainer = document.getElementById('layer-hair');
+    if (hairToggle && hairGroupContainer) {
+        hairToggle.addEventListener('change', (e) => {
+            hairGroupContainer.style.display = e.target.checked ? 'block' : 'none';
+            updateStats();
+        });
+    }
+
+    // Inject Fat Layers
+    const fatGroup = document.getElementById('group-fat');
+    if (fatGroup) fatGroup.innerHTML = fatLayersSVG;
+
+    const fatToggle = document.getElementById('toggle-fat');
+    const layerFat = document.getElementById('layer-fat');
+    if (fatToggle && layerFat) {
+        fatToggle.addEventListener('change', (e) => {
+            layerFat.style.display = e.target.checked ? 'block' : 'none';
+            updateStats();
+        });
+    }
+
+    // Inject Fascia Layers
+    const fasciaGroup = document.getElementById('group-fascia');
+    if (fasciaGroup) fasciaGroup.innerHTML = fasciaLayersSVG;
+
+    const fasciaToggle = document.getElementById('toggle-fascia');
+    const layerFascia = document.getElementById('layer-fascia');
+    if (fasciaToggle && layerFascia) {
+        fasciaToggle.addEventListener('change', (e) => {
+            layerFascia.style.display = e.target.checked ? 'block' : 'none';
+            updateStats();
+        });
+    }
+
     // --- Energy Body Toggles ---
 
     // Constants for ID mappings
@@ -470,13 +596,13 @@ document.addEventListener('DOMContentLoaded', () => {
     /*
     const grpLatifaEarth = document.getElementById('group-latifas-khalq-earth');
     if (grpLatifaEarth) grpLatifaEarth.innerHTML = latifasSVG.elements.earth;
-
+    
     const grpLatifaWater = document.getElementById('group-latifas-khalq-water');
     if (grpLatifaWater) grpLatifaWater.innerHTML = latifasSVG.elements.water;
-
+    
     const grpLatifaFire = document.getElementById('group-latifas-khalq-fire');
     if (grpLatifaFire) grpLatifaFire.innerHTML = latifasSVG.elements.fire;
-
+    
     const grpLatifaAir = document.getElementById('group-latifas-khalq-air');
     if (grpLatifaAir) grpLatifaAir.innerHTML = latifasSVG.elements.air;
     */
@@ -522,15 +648,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (grpRen) grpRen.innerHTML = egyptianLayersSVG.ren;
 
     // Inject Egyptian Layers (Overlay)
+    // Inject Egyptian Layers (Overlay)
     const grpKa = document.getElementById('group-egyptian-ka');
-    const grpBa = document.getElementById('group-egyptian-ba');
+    // Ba moved to group-egyptian-ba-top
+    const grpBaTop = document.getElementById('group-egyptian-ba-top');
     const grpAkh = document.getElementById('group-egyptian-akh');
     const grpIb = document.getElementById('group-egyptian-ib');
     const grpSekhem = document.getElementById('group-egyptian-sekhem');
     const grpSah = document.getElementById('group-egyptian-sah');
 
     if (grpKa) grpKa.innerHTML = egyptianLayersSVG.ka;
-    if (grpBa) grpBa.innerHTML = egyptianLayersSVG.ba;
+    if (grpBaTop) grpBaTop.innerHTML = egyptianLayersSVG.ba;
     if (grpAkh) grpAkh.innerHTML = egyptianLayersSVG.akh;
     if (grpIb) grpIb.innerHTML = egyptianLayersSVG.ib;
     if (grpSekhem) grpSekhem.innerHTML = egyptianLayersSVG.sekhem;
@@ -540,19 +668,39 @@ document.addEventListener('DOMContentLoaded', () => {
     const egyptianToggle = document.getElementById('toggle-egyptian');
     const layerEgyUnderlay = document.getElementById('layer-egyptian-underlay');
     const layerEgyOverlay = document.getElementById('layer-egyptian-overlay');
+    const layerBaTop = document.getElementById('layer-ba-top');
 
     if (egyptianToggle) {
         egyptianToggle.addEventListener('change', (e) => {
             const isActive = e.target.checked;
             if (layerEgyUnderlay) layerEgyUnderlay.style.display = isActive ? 'block' : 'none';
             if (layerEgyOverlay) layerEgyOverlay.style.display = isActive ? 'block' : 'none';
+            if (layerBaTop) layerBaTop.style.display = isActive ? 'block' : 'none';
+            updateStats();
+        });
+    }
+
+    // --- Palmistry Map ---
+    const palmDefs = document.getElementById('palmistry-defs');
+    if (palmDefs) palmDefs.innerHTML = palmistrySVG.defs;
+
+    const palmGroup = document.getElementById('group-palmistry');
+    if (palmGroup) {
+        palmGroup.innerHTML = palmistrySVG.left + palmistrySVG.right;
+    }
+
+    const palmToggle = document.getElementById('toggle-palmistry');
+    const layerPalmistry = document.getElementById('layer-palmistry');
+    if (palmToggle && layerPalmistry) {
+        palmToggle.addEventListener('change', (e) => {
+            layerPalmistry.style.display = e.target.checked ? 'block' : 'none';
             updateStats();
         });
     }
 
     // Hover effects for various layers
     svg.addEventListener('mouseover', (e) => {
-        const target = e.target.closest('.bone, .tooth, .chakra, .sephirot, .kosha, .organ, .muscle, .tendon, .egyptian-layer, .circuit, .dantian-node, .latifa-node');
+        const target = e.target.closest('.bone, .tooth, .chakra, .sephirot, .kosha, .organ, .muscle, .tendon, .egyptian-layer, .circuit, .dantian-node, .latifa-node, .palm-line, .palm-mount-group');
         if (target) {
             const name = target.getAttribute('data-name') || 'Unknown Part';
             const medicalName = target.getAttribute('data-medical-name') || '';

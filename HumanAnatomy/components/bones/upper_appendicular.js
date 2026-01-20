@@ -55,6 +55,14 @@ export const scapulaeSVG = `
            Q 185 350, 180 355
            Z"
         fill="#e8dcc0" stroke="#8b7b6b" stroke-width="1" />
+
+    <!-- Shadows for Scapula Depth -->
+    <g id="scapula_shadows">
+        <!-- Subscapular Fossa Shadow (Left) -->
+        <path class="bone-shadow" d="M -130 360 Q -150 400 -120 460 L -115 480 Q -110 400 -115 350 Z" opacity="0.1" />
+        <!-- Subscapular Fossa Shadow (Right) -->
+        <path class="bone-shadow" d="M 130 360 Q 150 400 120 460 L 115 480 Q 110 400 115 350 Z" opacity="0.1" />
+    </g>
 `;
 
 export const upperLimbsSVG = `
@@ -87,28 +95,26 @@ export const upperLimbsSVG = `
         HUMERUS (Arm Bone) - Refined v2
     -->
     
-    <!-- Left Humerus -->
+    <!-- Left Humerus (Thickened) -->
     <path id="bone_humerus_left" class="bone" data-name="Left Humerus" data-medical-name="Humerus Sinister"
-        d="M -180 345
-           C -200 335, -215 350, -210 380
-           Q -210 500, -305 760
-           C -320 770, -335 765, -330 741
-           Q -300 755, -286 741
-           L -225 365
-           C -220 350, -200 345, -195 345
-           L -180 345
+        d="M -175 345
+           C -195 335, -235 350, -230 390
+           Q -230 550, -320 750
+           C -335 770, -290 785, -280 770
+           Q -270 765, -260 745
+           L -205 385
+           C -200 360, -185 350, -175 345
            Z" />
 
-    <!-- Right Humerus -->
+    <!-- Right Humerus (Thickened) -->
     <path id="bone_humerus_right" class="bone" data-name="Right Humerus" data-medical-name="Humerus Dexter"
-        d="M 180 345
-           C 200 335, 215 350, 210 380
-           Q 210 500, 305 760
-           C 320 770, 335 765, 330 741
-           Q 300 755, 286 741
-           L 225 365
-           C 220 350, 200 345, 195 345
-           L 180 345
+        d="M 175 345
+           C 195 335, 235 350, 230 390
+           Q 230 550, 320 750
+           C 335 770, 290 785, 280 770
+           Q 270 765, 260 745
+           L 205 385
+           C 200 360, 185 350, 175 345
            Z" />
 
     <!-- 
@@ -157,6 +163,21 @@ export const upperLimbsSVG = `
            L 270 750
            Q 275 735, 286 741
            Z" />
+
+    <!-- Shadows for Upper Limb Depth -->
+    <g id="upper_limb_shadows">
+        <!-- Humerus Surgical Neck/Axilla Shadow -->
+        <path class="bone-shadow" d="M -200 350 L -210 380 L -180 360 Z" opacity="0.2" />
+        <path class="bone-shadow" d="M 200 350 L 210 380 L 180 360 Z" opacity="0.2" />
+        
+        <!-- Elbow Cubital Fossa Shadow -->
+        <path class="bone-shadow" d="M -290 750 L -310 770 L -280 770 Z" opacity="0.15" />
+        <path class="bone-shadow" d="M 290 750 L 310 770 L 280 770 Z" opacity="0.15" />
+        
+        <!-- Interosseous Space Shadow (Forearm) -->
+        <path class="bone-shadow" d="M -300 780 L -330 1000 L -340 1000 L -310 780 Z" opacity="0.1" />
+        <path class="bone-shadow" d="M 300 780 L 330 1000 L 340 1000 L 310 780 Z" opacity="0.1" />
+    </g>
 `;
 
 export const upperAppendicularSVG = scapulaeSVG + upperLimbsSVG;

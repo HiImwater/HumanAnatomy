@@ -156,44 +156,88 @@ export const egyptianLayersSVG = {
         </g>
     `,
 
-    // 3. Ba (Personality/Soul Bird) - Overlay - Enhanced falcon
+    // 3. Ba (Personality/Soul Bird) - Overlay - GLORIOUS High-Fidelity
     ba: `
         <defs>
-            <linearGradient id="feather-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#8B4513"/>
-                <stop offset="50%" stop-color="#CD7F32"/>
-                <stop offset="100%" stop-color="#DAA520"/>
+            <linearGradient id="lapis-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1c3b70"/> <!-- Lapis Lazuli -->
+                <stop offset="50%" stop-color="#cfb53b"/> <!-- Gold -->
+                <stop offset="100%" stop-color="#1c3b70"/>
             </linearGradient>
-            <linearGradient id="wing-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stop-color="#654321"/>
-                <stop offset="30%" stop-color="#8B4513"/>
-                <stop offset="70%" stop-color="#CD7F32"/>
-                <stop offset="100%" stop-color="#DAA520"/>
+            <radialGradient id="sun-gold" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#fffebb"/> <!-- Bright Center -->
+                <stop offset="40%" stop-color="#ffcc00"/> <!-- Gold -->
+                <stop offset="100%" stop-color="#b8860b"/> <!-- Dark Gold -->
+            </radialGradient>
+            <linearGradient id="feather-detail" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#2a9df4"/> <!-- Turquoise -->
+                <stop offset="100%" stop-color="#1c3b70"/> <!-- Lapis -->
             </linearGradient>
+            <filter id="ba-divine-glow" x="-50%" y="-50%" width="200%" height="200%">
+                <feGaussianBlur stdDeviation="4" result="blur"/>
+                <feFlood flood-color="#ffd700" flood-opacity="0.6" result="color"/>
+                <feComposite in="color" in2="blur" operator="in" result="glow"/>
+                <feMerge>
+                    <feMergeNode in="glow"/>
+                    <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+            </filter>
         </defs>
-        <g id="egyptian-ba" class="egyptian-layer" data-name="Ba" data-medical-name="The Personality Soul" data-desc="The 'free-roaming' aspect of the self, depicted as a human-headed falcon. Centered in the heart, it could travel between worlds.">
+        <g id="egyptian-ba" class="egyptian-layer" data-name="Ba" data-medical-name="The Personality Soul" data-desc="The glorious, free-roaming aspect of the soul. A human-headed falcon of splendor, tethered to the heart." style="filter: url(#ba-divine-glow);">
              
-             <!-- Red Droopy String (Tether) to Heart -->
-             <!-- From Ba Center (-160, 260) to Heart Center (0, 420) -->
-             <path d="M-160,260 Q-80,450 0,420" fill="none" class="ba-string" stroke="#cc0000" stroke-width="2" stroke-dasharray="4,2" opacity="0.8">
-                 <animate attributeName="d" values="M-160,260 Q-80,450 0,420; M-160,260 Q-80,480 0,420; M-160,260 Q-80,450 0,420" dur="4s" repeatCount="indefinite"/>
+             <!-- Glowing Tether to Heart -->
+             <path d="M-160,260 Q-80,450 0,420" fill="none" class="ba-string" stroke="#ff4444" stroke-width="2.5" stroke-dasharray="1,3" stroke-linecap="round">
+                 <animate attributeName="stroke-dashoffset" values="0; -40" dur="2s" repeatCount="indefinite"/>
+                 <animate attributeName="opacity" values="0.4; 1; 0.4" dur="3s" repeatCount="indefinite"/>
              </path>
 
-             <!-- Smaller Ba bird positioned above Left Shoulder -->
-             <!-- New Position: X=-160, Y=260 -->
-             <g transform="translate(-160, 260) scale(0.5)">
-                 <!-- Bird Body -->
-                 <ellipse cx="0" cy="40" rx="20" ry="28" fill="url(#feather-gradient)" stroke="#8B4513" stroke-width="1.5"/>
-                 <!-- Wings (simplified) -->
-                 <path d="M-18,35 C-50,20 -80,10 -100,15 C-70,30 -40,45 -18,50 Z" fill="url(#wing-gradient)" stroke="#8B4513"/>
-                 <path d="M18,35 C50,20 80,10 100,15 C70,30 40,45 18,50 Z" fill="url(#wing-gradient)" stroke="#8B4513"/>
+             <!-- The Ba Bird (Positioned above Left Shoulder) -->
+             <g transform="translate(-160, 260) scale(0.55)"> <!-- Slightly scaled up for presence -->
+                 
+                 <!-- Aura -->
+                 <circle cx="0" cy="20" r="60" fill="url(#sun-gold)" opacity="0.15">
+                    <animate attributeName="r" values="60; 65; 60" dur="4s" repeatCount="indefinite"/>
+                 </circle>
+
+                 <!-- Tail Feathers (Fan) -->
+                 <path d="M-15,60 L-25,90 L0,95 L25,90 L15,60 Z" fill="url(#feather-detail)" stroke="#cfb53b" stroke-width="1"/>
+                 
+                 <!-- Wings (Majestic Spread) -->
+                 <!-- Left Wing -->
+                 <g transform="rotate(10, -20, 30)">
+                    <path d="M-20,30 Q-60,10 -110,20 Q-100,50 -60,60 Q-40,55 -20,50 Z" fill="url(#lapis-gold)" stroke="#cfb53b" stroke-width="1.5"/>
+                    <!-- Individual Feathers -->
+                    <path d="M-20,30 Q-60,10 -110,20" fill="none" stroke="#cfb53b" stroke-width="0.5" stroke-dasharray="2,2"/>
+                 </g>
+                 <!-- Right Wing -->
+                 <g transform="rotate(-10, 20, 30)">
+                    <path d="M20,30 Q60,10 110,20 Q100,50 60,60 Q40,55 20,50 Z" fill="url(#lapis-gold)" stroke="#cfb53b" stroke-width="1.5"/>
+                 </g>
+
+                 <!-- Body (Falcon) -->
+                 <ellipse cx="0" cy="40" rx="22" ry="30" fill="url(#sun-gold)" stroke="#b8860b" stroke-width="2"/>
+                 <!-- Chest Plumage -->
+                 <path d="M-10,30 Q0,45 10,30" fill="none" stroke="#b8860b" stroke-width="1" opacity="0.5"/>
+                 <path d="M-12,38 Q0,53 12,38" fill="none" stroke="#b8860b" stroke-width="1" opacity="0.5"/>
+
                  <!-- Human Head -->
-                 <circle cx="0" cy="5" r="18" fill="#E8C39E" stroke="#8B4513" stroke-width="1.5"/>
-                 <!-- Eyes -->
-                 <ellipse cx="-6" cy="2" rx="2" ry="3" fill="#2F1810"/>
-                 <ellipse cx="6" cy="2" rx="2" ry="3" fill="#2F1810"/>
-                 <!-- Headdress -->
-                 <path d="M-18,-8 C-15,-18 15,-18 18,-8" stroke="#1E3A5F" stroke-width="3" fill="none"/>
+                 <circle cx="0" cy="5" r="16" fill="#dcbfa6" stroke="#8b4513" stroke-width="1"/>
+                 
+                 <!-- Nemes Headdress (Royal) -->
+                 <path d="M-16,5 Q-20,-15 0,-20 Q20,-15 16,5 Q22,20 28,30 L20,35 Q15,20 12,15 L-12,15 Q-15,20 -20,35 L-28,30 Q-22,20 -16,5" 
+                       fill="#1c3b70" stroke="#ffd700" stroke-width="2"/>
+                 <!-- Gold stripes on Headdress -->
+                 <path d="M-14,-5 L14,-5 M-15,0 L15,0 M-16,5 L16,5" stroke="#ffd700" stroke-width="1.5" fill="none"/>
+
+                 <!-- Face Details -->
+                 <path d="M-10,25 Q0,30 10,25" fill="none" stroke="#cfb53b" stroke-width="2"/> <!-- Collar -->
+                 <ellipse cx="-5" cy="4" rx="2" ry="1.5" fill="#000"/> <!-- Eye -->
+                 <ellipse cx="5" cy="4" rx="2" ry="1.5" fill="#000"/> <!-- Eye -->
+                 <path d="M-8,2 Q-5,0 -2,2" stroke="#000" stroke-width="0.5" fill="none"/> <!-- Brow -->
+                 <path d="M8,2 Q5,0 2,2" stroke="#000" stroke-width="0.5" fill="none"/> <!-- Brow -->
+                 
+                 <!-- Beard (Pharaonic) -->
+                 <path d="M-2,20 L-1,28 L1,28 L2,20 Z" fill="#1c3b70"/>
              </g>
         </g>
     `,

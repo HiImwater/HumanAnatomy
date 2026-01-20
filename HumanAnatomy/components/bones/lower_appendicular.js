@@ -151,4 +151,19 @@ export const lowerAppendicularSVG = `
            C 110 1800, 112 1700, 115 1600 
            C 118 1540, 118 1520, 118 1505 
            Z" />
+
+    <!-- Shadows for Lower Limb Depth -->
+    <g id="lower_limb_shadows">
+        <!-- Femur Neck/Hip Joint Shadow -->
+        <path class="bone-shadow" d="M -110 970 L -100 1000 L -120 1000 Z" opacity="0.2" />
+        <path class="bone-shadow" d="M 110 970 L 100 1000 L 120 1000 Z" opacity="0.2" />
+
+        <!-- Knee/Popliteal/Patella Shadow -->
+        <path class="bone-shadow" d="M -90 1455 Q -90 1475 -90 1475" stroke="black" stroke-width="2" stroke-opacity="0.1" fill="none" />
+        <path class="bone-shadow" d="M 90 1455 Q 90 1475 90 1475" stroke="black" stroke-width="2" stroke-opacity="0.1" fill="none" />
+
+        <!-- Interosseous Space Shadow (Leg) -->
+        <path class="bone-shadow" d="M -105 1500 L -115 1800 L -110 1800 L -100 1500 Z" opacity="0.1" />
+        <path class="bone-shadow" d="M 105 1500 L 115 1800 L 110 1800 L 100 1500 Z" opacity="0.1" />
+    </g>
 `;

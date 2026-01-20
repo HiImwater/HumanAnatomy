@@ -61,19 +61,35 @@ export const handsMusclesSVG = `
                Q -385 1085, -365 1070
                Z" />
 
-        <!-- Lumbricals (Anchored between MCs to PP base) -->
+        <!-- Segmented Finger Extensors (Slips to each digit) -->
+        <g id="muscles_ext_dig_slips_l" opacity="0.9">
+            <path id="m_ext_dig_l_2" class="muscle-superficial muscle" data-name="Extensor Digitorum (Digit 2)" d="M -300 760 L -380 1100 L -395 1100 Z" />
+            <path id="m_ext_dig_l_3" class="muscle-superficial muscle" data-name="Extensor Digitorum (Digit 3)" d="M -300 760 L -370 1110 L -380 1110 Z" />
+            <path id="m_ext_dig_l_4" class="muscle-superficial muscle" data-name="Extensor Digitorum (Digit 4)" d="M -300 760 L -355 1110 L -365 1110 Z" />
+            <path id="m_ext_dig_l_5" class="muscle-superficial muscle" data-name="Extensor Digitorum (Digit 5)" d="M -300 760 L -340 1100 L -350 1100 Z" />
+        </g>
+
+        <!-- Segmented Flexor Digitorum Superficialis (Slips) -->
+        <g id="muscles_fds_slips_l" opacity="0.6">
+            <path id="m_fds_l_2" class="muscle-deep muscle" data-name="Flexor Digitorum Superficialis (Digit 2)" d="M -290 770 L -380 1100 L -390 1100 Z" />
+            <path id="m_fds_l_3" class="muscle-deep muscle" data-name="Flexor Digitorum Superficialis (Digit 3)" d="M -290 770 L -370 1110 L -380 1110 Z" />
+            <path id="m_fds_l_4" class="muscle-deep muscle" data-name="Flexor Digitorum Superficialis (Digit 4)" d="M -290 770 L -355 1110 L -365 1110 Z" />
+            <path id="m_fds_l_5" class="muscle-deep muscle" data-name="Flexor Digitorum Superficialis (Digit 5)" d="M -290 770 L -340 1100 L -350 1100 Z" />
+        </g>
+
+        <!-- Lumbricals -->
         <path id="m_lumbrical_1_l" class="muscle-superficial muscle" data-name="Lumbrical 1" d="M -380 1080 Q -390 1095, -392 1111 L -388 1114 Q -385 1100, -378 1082 Z" />
         <path id="m_lumbrical_2_l" class="muscle-superficial muscle" data-name="Lumbrical 2" d="M -370 1085 Q -377 1100, -380 1117 L -376 1120 Q -373 1105, -368 1087 Z" />
         <path id="m_lumbrical_3_l" class="muscle-superficial muscle" data-name="Lumbrical 3" d="M -360 1090 Q -365 1105, -365 1118 L -361 1121 Q -358 1106, -358 1092 Z" />
         <path id="m_lumbrical_4_l" class="muscle-superficial muscle" data-name="Lumbrical 4" d="M -350 1095 Q -347 1105, -347 1111 L -343 1114 Q -344 1100, -348 1097 Z" />
 
-        <!-- Dorsal Interossei (Anchored between MCs to PP base) -->
+        <!-- Dorsal Interossei -->
         <path id="m_dorsal_int_1_l" class="muscle-deep muscle" data-name="1st Dorsal Interosseous" d="M -385 1075 Q -395 1095, -390 1110 L -386 1105 Q -375 1090, -375 1075 Z" />
         <path id="m_dorsal_int_2_l" class="muscle-deep muscle" data-name="2nd Dorsal Interosseous" d="M -372 1080 Q -375 1100, -378 1115 L -374 1110 Q -368 1095, -368 1080 Z" />
         <path id="m_dorsal_int_3_l" class="muscle-deep muscle" data-name="3rd Dorsal Interosseous" d="M -362 1085 Q -370 1100, -375 1115 L -371 1110 Q -358 1095, -358 1085 Z" />
         <path id="m_dorsal_int_4_l" class="muscle-deep muscle" data-name="4th Dorsal Interosseous" d="M -352 1090 Q -360 1105, -363 1115 L -359 1110 Q -348 1100, -348 1090 Z" />
 
-        <!-- Palmar Interossei (Anchored MC to PP base) -->
+        <!-- Palmar Interossei -->
         <path id="m_palmar_int_1_l" class="muscle-deep muscle" data-name="1st Palmar Interosseous" d="M -375 1080 L -388 1110 L -384 1112 Z" />
         <path id="m_palmar_int_2_l" class="muscle-deep muscle" data-name="2nd Palmar Interosseous" d="M -355 1090 L -362 1115 L -358 1117 Z" />
         <path id="m_palmar_int_3_l" class="muscle-deep muscle" data-name="3rd Palmar Interosseous" d="M -345 1100 L -345 1110 L -341 1112 Z" />
@@ -128,6 +144,22 @@ export const handsMusclesSVG = `
                L 405 1100
                Q 385 1085, 365 1070
                Z" />
+
+        <!-- Segmented Finger Extensors (Right) -->
+        <g id="muscles_ext_dig_slips_r" opacity="0.9">
+            <path id="m_ext_dig_r_2" class="muscle-superficial muscle" data-name="Extensor Digitorum (Digit 2)" d="M 300 760 L 380 1100 L 395 1100 Z" />
+            <path id="m_ext_dig_r_3" class="muscle-superficial muscle" data-name="Extensor Digitorum (Digit 3)" d="M 300 760 L 370 1110 L 380 1110 Z" />
+            <path id="m_ext_dig_r_4" class="muscle-superficial muscle" data-name="Extensor Digitorum (Digit 4)" d="M 300 760 L 355 1110 L 365 1110 Z" />
+            <path id="m_ext_dig_r_5" class="muscle-superficial muscle" data-name="Extensor Digitorum (Digit 5)" d="M 300 760 L 340 1100 L 350 1100 Z" />
+        </g>
+
+        <!-- Segmented Flexor Digitorum Superficialis (Right Slips) -->
+        <g id="muscles_fds_slips_r" opacity="0.6">
+            <path id="m_fds_r_2" class="muscle-deep muscle" data-name="Flexor Digitorum Superficialis (Digit 2)" d="M 290 770 L 380 1100 L 390 1100 Z" />
+            <path id="m_fds_r_3" class="muscle-deep muscle" data-name="Flexor Digitorum Superficialis (Digit 3)" d="M 290 770 L 370 1110 L 380 1110 Z" />
+            <path id="m_fds_r_4" class="muscle-deep muscle" data-name="Flexor Digitorum Superficialis (Digit 4)" d="M 290 770 L 355 1110 L 365 1110 Z" />
+            <path id="m_fds_r_5" class="muscle-deep muscle" data-name="Flexor Digitorum Superficialis (Digit 5)" d="M 290 770 L 340 1100 L 350 1100 Z" />
+        </g>
 
         <path id="m_lumbrical_1_r" class="muscle-superficial muscle" data-name="Lumbrical 1" d="M 380 1080 Q 390 1095, 392 1111 L 388 1114 Q 385 1100, 378 1082 Z" />
         <path id="m_lumbrical_2_r" class="muscle-superficial muscle" data-name="Lumbrical 2" d="M 370 1085 Q 377 1100, 380 1117 L 376 1120 Q 373 1105, 368 1087 Z" />

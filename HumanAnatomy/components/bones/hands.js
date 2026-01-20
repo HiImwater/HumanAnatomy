@@ -339,4 +339,14 @@ export const handsSVG = `
            C 338.1 1183.4, 331.3 1185.2, 330.5 1182.3 
            C 330.7 1179.1, 331.6 1174.8, 331.8 1171.6 
            C 333.0 1168.2, 336.8 1167.2, 339.5 1169.5 Z" />
+    <!-- Shadows for Hand Depth -->
+    <g id="hand_shadows">
+        <!-- Palm Hollow/Metacarpal Spaces (Left) -->
+        <path class="bone-shadow" d="M -370 1060 L -350 1100 L -390 1100 Z" opacity="0.1" />
+        <path class="bone-shadow" d="M -360 1060 L -340 1100 L -380 1100 Z" opacity="0.1" />
+        
+         <!-- Palm Hollow/Metacarpal Spaces (Right) -->
+        <path class="bone-shadow" d="M 370 1060 L 350 1100 L 390 1100 Z" opacity="0.1" />
+        <path class="bone-shadow" d="M 360 1060 L 340 1100 L 380 1100 Z" opacity="0.1" />
+    </g>
 `;
